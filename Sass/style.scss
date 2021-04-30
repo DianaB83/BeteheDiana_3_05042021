@@ -134,8 +134,6 @@
                                                                 $tertiare: #99E2D0;
                                                                 $gray: #666666;
                                                                 $heading-shadow-size: .55rem;
-                                                                $layout-margin: 6rem;
-                                                                $grid-gutter: $layout-margin * .25;
                                                                 @media (max-width: 990px) {
                                                                     .site {
                                                                         width: 100%
@@ -187,8 +185,8 @@
                                                                 .main {
                                                                     .restaurants {
                                                                         display: flex;
-                                                                        flex-direction: column;
-                                                                        justify-content: center;
+                                                                        flex-wrap: wrap;
+                                                                        justify-content: space-around;
                                                                         .restaurants_title {
                                                                             flex-basis: 100%;
                                                                             padding: 0 16px 30px 0;
@@ -351,6 +349,17 @@
                                                                 
                                                                 .header {
                                                                     padding: 0 0 4rem 0;
+                                                                    .site_title {
+                                                                        text-align: center;
+                                                                        padding: 1.2rem 0;
+                                                                        font-size: 2.2em;
+                                                                        font-weight: 900;
+                                                                        font-family: 'Shrikhand', cursive;
+                                                                        box-shadow: 0 0 .7rem .2rem rgb(148, 148, 148);
+                                                                        width: 100%;
+                                                                        background-color: white;
+                                                                        position: relative;
+                                                                    }
                                                                     .location {
                                                                         text-align: center;
                                                                         padding: 1.2rem;
@@ -429,6 +438,13 @@
                                                                                     color: gray;
                                                                                     font-size: 1.1em;
                                                                                     margin-right: 1.5rem;
+                                                                                }
+                                                                                &:hover .number {
+                                                                                    box-shadow: 0 0 10px gray;
+                                                                                    transform: scale(1.1);
+                                                                                }
+                                                                                &:hover {
+                                                                                    box-shadow: 0 .1rem .2rem .2rem rgba(167, 167, 167, 0.699);
                                                                                 }
                                                                             }
                                                                         }
