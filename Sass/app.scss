@@ -1,0 +1,16 @@
+@import "./utils/variables";
+@import "./components/introaction";
+@import "./components/like";
+@import "./components/footer";
+@import "./components/restaurant_card";
+@import "./layout/container";
+@import "./layout/header";
+@import "./layout/container";
+
+/* STYLE OF PAGE */
+
+@import "./pages/menu";
+
+/* CSS pour les grand ecran  */
+
+@import "./base/media";

@@ -93,11 +93,8 @@
                 }
                 &:hover .number {
                     box-shadow: 0 0 10px gray;
-                    transform: scale(1.1);
                 }
-                &:hover {
-                    box-shadow: 0 .1rem .2rem .2rem rgba(167, 167, 167, 0.699);
-                }
+                box-shadow: 0 .1rem .2rem .2rem rgba(167, 167, 167, 0.699);
             }
         }
     }

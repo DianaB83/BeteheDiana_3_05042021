@@ -1,0 +1,114 @@
+@charset "UTF-8";
+/**
+Page de Palette du goût
+*/
+.menu_header {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+.menu_header h1.site_title {
+  box-shadow: none;
+  text-align: center;
+  font-size: 2.5em;
+  padding: 20px 0;
+  font-weight: 800;
+  font-family: "Shrikhand", cursive;
+}
+.menu_header .back {
+  position: absolute;
+  left: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99999;
+}
+.menu_header .back a {
+  display: inline-block;
+}
+.menu_header .back a span {
+  font-size: 1.6em;
+  font-weight: 800;
+}
+.menu_header .back a:hover::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: grow 0.3s ease;
+}
+
+.menu_main {
+  padding: 0;
+  margin: 0;
+  background-color: #f3f2f2;
+  overflow: hidden;
+}
+.menu_main .image {
+  height: 300px;
+  background-image: url("../../images/restaurants/la_palette_du_gout.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.menu_main .image.La_note_enchantee {
+  background-image: url("../../images/restaurants/La_note_enchantee.jpg");
+}
+.menu_main .image.A_la_francaise {
+  background-image: url("../../images/restaurants/A_la_francaise.jpg");
+}
+.menu_main .image.Le_delice_des_sens {
+  background-image: url("../../images/restaurants/le_delice_des_sens.jpg");
+}
+.menu_main .menu {
+  padding: 0 16px;
+  margin-top: -50px;
+  border-radius: 40px 40px 0 0;
+  background-color: #f3f2f2;
+}
+.menu_main .menu header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+}
+.menu_main .menu header h2 {
+  font-style: italic;
+  font-weight: 900;
+  font-size: 2em;
+  font-family: "Shrikhand", cursive;
+  margin-left: 8px;
+}
+.menu_main .menu header .like {
+  margin-right: 2rem;
+}
+.menu_main .menu .group {
+  margin-top: 25px;
+}
+.menu_main .menu .group h2 {
+  font-size: 1.6em;
+  color: #575757;
+  position: relative;
+  padding-bottom: 12px;
+  display: inline-block;
+}
+.menu_main .menu .group h2::after {
+  position: absolute;
+  content: "";
+  width: 50%;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  border-radius: 4px;
+}
+.menu_main .menu .button_order {
+  text-align: center;
+  padding: 30px;
+}
+.menu_main .menu .button_order .order {
+  padding: 15px 70px;
+}
+
+/*# sourceMappingURL=menu.css.map */

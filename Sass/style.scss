@@ -134,6 +134,8 @@
                                                                 $tertiare: #99E2D0;
                                                                 $gray: #666666;
                                                                 $heading-shadow-size: .55rem;
+                                                                $layout-margin: 6rem;
+                                                                $grid-gutter: $layout-margin * .25;
                                                                 @media (max-width: 990px) {
                                                                     .site {
                                                                         width: 100%
@@ -168,9 +170,11 @@
                                                                                     height: 50px;
                                                                                     line-height: 50px;
                                                                                     margin: 0;
+                                                                                    transform: translateY(-50%);
                                                                                 }
                                                                                 &:hover .number {
                                                                                     box-shadow: 0 0 10px gray;
+                                                                                    transform: translateY(-50%) scale(1.1);
                                                                                 }
                                                                                 .fas {
                                                                                     margin: 0;
@@ -180,19 +184,72 @@
                                                                             }
                                                                         }
                                                                     }
+                                                                    .main {
+                                                                        background-color: #f0f0f0;
+                                                                        padding: 4rem 1.1rem;
+                                                                        .restaurants {
+                                                                            .restaurants_title {
+                                                                                padding: 0 1rem 2rem 0;
+                                                                                font-size: 2em;
+                                                                                font-weight: 800;
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    .main {
+                                                                        .restaurants {
+                                                                            display: flex;
+                                                                            flex-wrap: wrap;
+                                                                            justify-content: space-around;
+                                                                            .restaurants_title {
+                                                                                flex-basis: 100%;
+                                                                                padding: 0 16px 30px 0;
+                                                                                font-size: 2em;
+                                                                                font-weight: 800;
+                                                                                text-align: center;
+                                                                            }
+                                                                            .restaurant_card {
+                                                                                flex-basis: 45%;
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    .menu_main header.image {
+                                                                        height: 25rem;
+                                                                        background-position: center center;
+                                                                    }
+                                                                    .menu {
+                                                                        display: flex;
+                                                                        flex-wrap: wrap;
+                                                                        justify-content: space-around;
+                                                                        header,
+                                                                        .button_order {
+                                                                            flex-basis: 100%;
+                                                                        }
+                                                                        header span {
+                                                                            cursor: pointer;
+                                                                        }
+                                                                        header span:hover {
+                                                                            display: none;
+                                                                        }
+                                                                        .group {
+                                                                            width: 45%;
+                                                                            border-radius: 15px;
+                                                                            box-shadow: 0 0 20px rgb(196, 196, 196);
+                                                                            padding: 20px
+                                                                        }
+                                                                    }
                                                                 }
                                                                 
-                                                                .main {
+                                                                .header .intro {
+                                                                    padding: 3% 15%;
+                                                                }
+                                                                
+                                                                @media (min-width: 635px) {
                                                                     .restaurants {
                                                                         display: flex;
                                                                         flex-wrap: wrap;
                                                                         justify-content: space-around;
                                                                         .restaurants_title {
                                                                             flex-basis: 100%;
-                                                                            padding: 0 16px 30px 0;
-                                                                            font-size: 2em;
-                                                                            font-weight: 800;
-                                                                            text-align: center;
                                                                         }
                                                                         .restaurant_card {
                                                                             flex-basis: 45%;
@@ -200,41 +257,24 @@
                                                                     }
                                                                 }
                                                                 
-                                                                .menu_main header.image {
-                                                                    height: 25rem;
-                                                                    background-position: center;
-                                                                }
-                                                                
-                                                                .menu {
-                                                                    display: flex;
-                                                                    flex-wrap: wrap;
-                                                                    justify-content: space-around;
-                                                                    header,
-                                                                    .button_order {
-                                                                        flex-basis: 100%;
-                                                                    }
-                                                                    header span {
-                                                                        cursor: pointer;
-                                                                    }
-                                                                    header span:hover {
-                                                                        display: none;
-                                                                    }
-                                                                    .group {
-                                                                        width: 45%;
-                                                                        border-radius: 15px;
-                                                                        box-shadow: 0 0 20px rgb(196, 196, 196);
-                                                                        padding: 20px
-                                                                    }
-                                                                }
-                                                                
                                                                 .menu_header {
                                                                     position: relative;
                                                                     padding: 0;
                                                                     margin: 0;
+                                                                    h1.site_title {
+                                                                        box-shadow: none;
+                                                                        text-align: center;
+                                                                        font-size: 2.5em;
+                                                                        padding: 20px 0;
+                                                                        font-weight: 800;
+                                                                        font-family: 'Shrikhand', cursive;
+                                                                    }
                                                                     .back {
                                                                         position: absolute;
                                                                         left: 25px;
                                                                         top: 50%;
+                                                                        transform: translateY(-50%);
+                                                                        z-index: 99999;
                                                                         a {
                                                                             display: inline-block;
                                                                             &:hover {
@@ -265,17 +305,17 @@
                                                                     overflow: hidden;
                                                                     .image {
                                                                         height: 300px;
-                                                                        background-image: url(images/restaurants/la_palette_du_gout.jpg);
+                                                                        background-image: url("../images/restaurants/la_palette_du_gout.jpg");
                                                                         background-size: cover;
                                                                         background-position: center;
                                                                         &.la_note_enchantee {
-                                                                            background-image: url(images/restaurants/La_note_enchantee.jpg);
+                                                                            background-image: url("../images/restaurants/La_note_enchantee.jpg");
                                                                         }
                                                                         &.a_la_francaise {
-                                                                            background-image: url(images/restaurants/A_la_francaise.jpg);
+                                                                            background-image: url("../images/restaurants/A_la_francaise.jpg");
                                                                         }
                                                                         &.le_delice_des_sens {
-                                                                            background-image: url(images/restaurants/le_delice_des_sens.jpg);
+                                                                            background-image: url("../images/restaurants/le_delice_des_sens.jpg");
                                                                         }
                                                                     }
                                                                     .menu {
@@ -359,6 +399,7 @@
                                                                         width: 100%;
                                                                         background-color: white;
                                                                         position: relative;
+                                                                        z-index: 999;
                                                                     }
                                                                     .location {
                                                                         text-align: center;
@@ -441,7 +482,6 @@
                                                                                 }
                                                                                 &:hover .number {
                                                                                     box-shadow: 0 0 10px gray;
-                                                                                    transform: scale(1.1);
                                                                                 }
                                                                                 &:hover {
                                                                                     box-shadow: 0 .1rem .2rem .2rem rgba(167, 167, 167, 0.699);
@@ -455,7 +495,6 @@
                                                                     position: relative;
                                                                     display: block;
                                                                     &:hover {
-                                                                        transform: translateY(-5px) scale(1.01);
                                                                         box-shadow: 0 0 10px gray;
                                                                     }
                                                                     &.new::after {
@@ -473,29 +512,32 @@
                                                                     border-radius: 1rem;
                                                                     overflow: hidden;
                                                                     margin-bottom: 1.3rem;
-                                                                    box-shadow: 0 0 .8rem rgba(134, 134, 134, 0.432);
+                                                                    box-shadow: 0 0 .8rem rgba(134,
+                                                                    134,
+                                                                    134,
+                                                                    0.432);
                                                                     .image1,
                                                                     .image2,
                                                                     .image3,
                                                                     .image4 {
                                                                         width: 100%;
                                                                         height: 13rem;
-                                                                        background-image: url("images/restaurants/la_palette_du_gout.jpg");
+                                                                        background-image: url("../images/restaurants/la_palette_du_gout.jpg");
                                                                         background-size: cover;
                                                                         background-position: bottom;
                                                                     }
                                                                     .image2 {
-                                                                        background-image: url("images/restaurants/La_note_enchantee.jpg");
+                                                                        background-image: url("../images/restaurants/La_note_enchantee.jpg");
                                                                         background-position: center;
                                                                         background-position-y: 60%;
                                                                     }
                                                                     .image3 {
-                                                                        background-image: url("images/restaurants/A_la_francaise.jpg");
+                                                                        background-image: url("../images/restaurants/A_la_francaise.jpg");
                                                                         background-size: cover;
                                                                         background-position: bottom;
                                                                     }
                                                                     .image4 {
-                                                                        background-image: url("images/restaurants/le_delice_des_sens.jpg");
+                                                                        background-image: url("../images/restaurants/le_delice_des_sens.jpg");
                                                                     }
                                                                     .restaurant_card_body {
                                                                         display: flex;
@@ -519,6 +561,110 @@
                                                                         .like {
                                                                             display: block;
                                                                         }
+                                                                    }
+                                                                }
+                                                                
+                                                                .group_item {
+                                                                    margin-top: 16px;
+                                                                    display: flex;
+                                                                    justify-content: space-between;
+                                                                    padding: 0;
+                                                                    background-color: #fff;
+                                                                    border-radius: 16px;
+                                                                    box-shadow: 0 0 15px rgb(196, 196, 196);
+                                                                    overflow: hidden;
+                                                                    opacity: 0;
+                                                                    position: relative;
+                                                                    top: 20px;
+                                                                    height: 72px;
+                                                                    transition: all .2s ease;
+                                                                    cursor: pointer;
+                                                                    .group_item_description {
+                                                                        flex-basis: 100%;
+                                                                        display: flex;
+                                                                        padding: 16px;
+                                                                        justify-content: space-between;
+                                                                        height: 40px;
+                                                                        .group_item_description_text {
+                                                                            flex-basis: 70%;
+                                                                            h3 {
+                                                                                font-weight: 800;
+                                                                                margin-bottom: 10px;
+                                                                                white-space: nowrap;
+                                                                                text-overflow: ellipsis;
+                                                                                overflow: hidden;
+                                                                            }
+                                                                            p {
+                                                                                font-size: .9em;
+                                                                                white-space: nowrap;
+                                                                                font-size: 0.9em;
+                                                                                text-overflow: ellipsis;
+                                                                                color: #4e4e4e;
+                                                                                overflow: hidden;
+                                                                            }
+                                                                        }
+                                                                        .group_item_price {
+                                                                            display: flex;
+                                                                            align-items: flex-end;
+                                                                            justify-content: flex-end;
+                                                                            font-weight: 700;
+                                                                            font-size: .9em;
+                                                                            flex-basis: 30%;
+                                                                        }
+                                                                    }
+                                                                    .group_item_selected {
+                                                                        align-items: center;
+                                                                        justify-content: center;
+                                                                        background-color: $tertiare;
+                                                                        display: none;
+                                                                        transition: all 0.4s ease;
+                                                                        display: flex;
+                                                                        width: 0;
+                                                                        overflow: hidden;
+                                                                        color: white;
+                                                                        font-size: 1.6em;
+                                                                    }
+                                                                    &:hover {
+                                                                        box-shadow: 0 0 10px $tertiare;
+                                                                    }
+                                                                    &:hover .group_item_description {
+                                                                        width: 75%;
+                                                                        .group_item_description_text {
+                                                                            width: 75%;
+                                                                        }
+                                                                        .group_item_price {
+                                                                            width: 50px;
+                                                                        }
+                                                                    }
+                                                                    &:hover .group_item_selected {
+                                                                        width: 25%
+                                                                    }
+                                                                }
+                                                                
+                                                                .like {
+                                                                    position: relative;
+                                                                    padding-right: 30px;
+                                                                    span {
+                                                                        display: inline-block;
+                                                                        position: absolute;
+                                                                        left: 50%;
+                                                                        top: 50%;
+                                                                        transform: translate(-50%, -50%);
+                                                                        font-size: 1.6em;
+                                                                        cursor: pointer;
+                                                                    }
+                                                                    .fas {
+                                                                        display: none;
+                                                                        color: $primary;
+                                                                    }
+                                                                    .far:hover {
+                                                                        display: none;
+                                                                    }
+                                                                    .far:hover~.fas {
+                                                                        display: block;
+                                                                    }
+                                                                    .fas:hover {
+                                                                        display: block;
                                                                     }
                                                                 }
                                                                 

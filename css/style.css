@@ -164,68 +164,107 @@ a {
     height: 50px;
     line-height: 50px;
     margin: 0;
+    transform: translateY(-50%);
   }
   .header .help .help_steps ul .step:hover .number {
     box-shadow: 0 0 10px gray;
+    transform: translateY(-50%) scale(1.1);
   }
   .header .help .help_steps ul .step .fas {
     margin: 0;
     margin-bottom: 20px;
     font-size: 2em;
   }
-}
-.main .restaurants {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-.main .restaurants .restaurants_title {
-  flex-basis: 100%;
-  padding: 0 16px 30px 0;
-  font-size: 2em;
-  font-weight: 800;
-  text-align: center;
-}
-.main .restaurants .restaurant_card {
-  flex-basis: 45%;
-}
 
-.menu_main header.image {
-  height: 25rem;
-  background-position: center;
-}
+  .main {
+    background-color: #f0f0f0;
+    padding: 4rem 1.1rem;
+  }
+  .main .restaurants .restaurants_title {
+    padding: 0 1rem 2rem 0;
+    font-size: 2em;
+    font-weight: 800;
+  }
 
-.menu {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-.menu header,
+  .main .restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .main .restaurants .restaurants_title {
+    flex-basis: 100%;
+    padding: 0 16px 30px 0;
+    font-size: 2em;
+    font-weight: 800;
+    text-align: center;
+  }
+  .main .restaurants .restaurant_card {
+    flex-basis: 45%;
+  }
+
+  .menu_main header.image {
+    height: 25rem;
+    background-position: center center;
+  }
+
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .menu header,
 .menu .button_order {
-  flex-basis: 100%;
+    flex-basis: 100%;
+  }
+  .menu header span {
+    cursor: pointer;
+  }
+  .menu header span:hover {
+    display: none;
+  }
+  .menu .group {
+    width: 45%;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #c4c4c4;
+    padding: 20px;
+  }
 }
-.menu header span {
-  cursor: pointer;
-}
-.menu header span:hover {
-  display: none;
-}
-.menu .group {
-  width: 45%;
-  border-radius: 15px;
-  box-shadow: 0 0 20px #c4c4c4;
-  padding: 20px;
+.header .intro {
+  padding: 3% 15%;
 }
 
+@media (min-width: 635px) {
+  .restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .restaurants .restaurants_title {
+    flex-basis: 100%;
+  }
+  .restaurants .restaurant_card {
+    flex-basis: 45%;
+  }
+}
 .menu_header {
   position: relative;
   padding: 0;
   margin: 0;
 }
+.menu_header h1.site_title {
+  box-shadow: none;
+  text-align: center;
+  font-size: 2.5em;
+  padding: 20px 0;
+  font-weight: 800;
+  font-family: "Shrikhand", cursive;
+}
 .menu_header .back {
   position: absolute;
   left: 25px;
   top: 50%;
+  transform: translateY(-50%);
+  z-index: 99999;
 }
 .menu_header .back a {
   display: inline-block;
@@ -256,18 +295,18 @@ a {
 }
 .menu_main .image {
   height: 300px;
-  background-image: url(images/restaurants/la_palette_du_gout.jpg);
+  background-image: url("../images/restaurants/la_palette_du_gout.jpg");
   background-size: cover;
   background-position: center;
 }
 .menu_main .image.la_note_enchantee {
-  background-image: url(images/restaurants/La_note_enchantee.jpg);
+  background-image: url("../images/restaurants/La_note_enchantee.jpg");
 }
 .menu_main .image.a_la_francaise {
-  background-image: url(images/restaurants/A_la_francaise.jpg);
+  background-image: url("../images/restaurants/A_la_francaise.jpg");
 }
 .menu_main .image.le_delice_des_sens {
-  background-image: url(images/restaurants/le_delice_des_sens.jpg);
+  background-image: url("../images/restaurants/le_delice_des_sens.jpg");
 }
 .menu_main .menu {
   padding: 0 16px;
@@ -349,6 +388,7 @@ a {
   width: 100%;
   background-color: white;
   position: relative;
+  z-index: 999;
 }
 .header .location {
   text-align: center;
@@ -432,7 +472,6 @@ a {
 }
 .header .help .help_steps ul .step:hover .number {
   box-shadow: 0 0 10px gray;
-  transform: scale(1.1);
 }
 .header .help .help_steps ul .step:hover {
   box-shadow: 0 0.1rem 0.2rem 0.2rem rgba(167, 167, 167, 0.699);
@@ -447,7 +486,6 @@ a {
   box-shadow: 0 0 0.8rem rgba(134, 134, 134, 0.432);
 }
 .restaurant_card:hover {
-  transform: translateY(-5px) scale(1.01);
   box-shadow: 0 0 10px gray;
 }
 .restaurant_card.new::after {
@@ -468,22 +506,22 @@ a {
 .restaurant_card .image4 {
   width: 100%;
   height: 13rem;
-  background-image: url("images/restaurants/la_palette_du_gout.jpg");
+  background-image: url("../images/restaurants/la_palette_du_gout.jpg");
   background-size: cover;
   background-position: bottom;
 }
 .restaurant_card .image2 {
-  background-image: url("images/restaurants/La_note_enchantee.jpg");
+  background-image: url("../images/restaurants/La_note_enchantee.jpg");
   background-position: center;
   background-position-y: 60%;
 }
 .restaurant_card .image3 {
-  background-image: url("images/restaurants/A_la_francaise.jpg");
+  background-image: url("../images/restaurants/A_la_francaise.jpg");
   background-size: cover;
   background-position: bottom;
 }
 .restaurant_card .image4 {
-  background-image: url("images/restaurants/le_delice_des_sens.jpg");
+  background-image: url("../images/restaurants/le_delice_des_sens.jpg");
 }
 .restaurant_card .restaurant_card_body {
   display: flex;
@@ -508,6 +546,110 @@ a {
   margin-top: 5px;
 }
 .restaurant_card .restaurant_card_body .like {
+  display: block;
+}
+
+.group_item {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 0 15px #c4c4c4;
+  overflow: hidden;
+  opacity: 0;
+  position: relative;
+  top: 20px;
+  height: 72px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.group_item .group_item_description {
+  flex-basis: 100%;
+  display: flex;
+  padding: 16px;
+  justify-content: space-between;
+  height: 40px;
+}
+.group_item .group_item_description .group_item_description_text {
+  flex-basis: 70%;
+}
+.group_item .group_item_description .group_item_description_text h3 {
+  font-weight: 800;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.group_item .group_item_description .group_item_description_text p {
+  font-size: 0.9em;
+  white-space: nowrap;
+  font-size: 0.9em;
+  text-overflow: ellipsis;
+  color: #4e4e4e;
+  overflow: hidden;
+}
+.group_item .group_item_description .group_item_price {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-weight: 700;
+  font-size: 0.9em;
+  flex-basis: 30%;
+}
+.group_item .group_item_selected {
+  align-items: center;
+  justify-content: center;
+  background-color: #99E2D0;
+  display: none;
+  transition: all 0.4s ease;
+  display: flex;
+  width: 0;
+  overflow: hidden;
+  color: white;
+  font-size: 1.6em;
+}
+.group_item:hover {
+  box-shadow: 0 0 10px #99E2D0;
+}
+.group_item:hover .group_item_description {
+  width: 75%;
+}
+.group_item:hover .group_item_description .group_item_description_text {
+  width: 75%;
+}
+.group_item:hover .group_item_description .group_item_price {
+  width: 50px;
+}
+.group_item:hover .group_item_selected {
+  width: 25%;
+}
+
+.like {
+  position: relative;
+  padding-right: 30px;
+}
+.like span {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.6em;
+  cursor: pointer;
+}
+.like .fas {
+  display: none;
+  color: #9356DC;
+}
+.like .far:hover {
+  display: none;
+}
+.like .far:hover ~ .fas {
+  display: block;
+}
+.like .fas:hover {
   display: block;
 }
 

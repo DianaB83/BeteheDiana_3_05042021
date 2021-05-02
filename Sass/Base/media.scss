@@ -46,50 +46,47 @@
             }
         }
     }
-}
-
-.main {
-    .restaurants {
+    .main {
+        .restaurants {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            .restaurants_title {
+                flex-basis: 100%;
+                padding: 0 16px 30px 0;
+                font-size: 2em;
+                font-weight: 800;
+                text-align: center;
+            }
+            .restaurant_card {
+                flex-basis: 45%;
+            }
+        }
+    }
+    .menu_main header.image {
+        height: 25rem;
+        background-position: center center;
+    }
+    .menu {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        .restaurants_title {
+        header,
+        .button_order {
             flex-basis: 100%;
-            padding: 0 16px 30px 0;
-            font-size: 2em;
-            font-weight: 800;
-            text-align: center;
         }
-        .restaurant_card {
-            flex-basis: 45%;
+        header span {
+            cursor: pointer;
         }
-    }
-}
-
-.menu_main header.image {
-    height: 25rem;
-    background-position: center center;
-}
-
-.menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    header,
-    .button_order {
-        flex-basis: 100%;
-    }
-    header span {
-        cursor: pointer;
-    }
-    header span:hover {
-        display: none;
-    }
-    .group {
-        width: 45%;
-        border-radius: 15px;
-        box-shadow: 0 0 20px rgb(196, 196, 196);
-        padding: 20px
+        header span:hover {
+            display: none;
+        }
+        .group {
+            width: 45%;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgb(196, 196, 196);
+            padding: 20px
+        }
     }
 }
 
