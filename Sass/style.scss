@@ -261,20 +261,12 @@ a {
 }
 
 .header {
-    padding: 0 0 4rem 0;
+    a {
+        display: flex;
+        justify-content: center;
+        padding: 2em;
+    }
     .location {
-        .img {
-            text-align: center;
-            padding: 1.2rem 0;
-            font-size: 2.2em;
-            font-weight: 900;
-            font-family: 'Shrikhand', cursive;
-            box-shadow: 0 0 .7rem .2rem rgb(148, 148, 148);
-            width: 100%;
-            background-color: white;
-            position: relative;
-            z-index: 999;
-        }
         text-align: center;
         padding: 1.2rem;
         background-color: rgb(218, 218, 218);
@@ -294,11 +286,11 @@ a {
         .intro_title {
             font-size: 1.3em;
             font-weight: 800;
-            margin-bottom: 40px;
+            text-align: center;
         }
         .intro_text {
             text-align: center;
-            margin-bottom: 4rem;
+            padding: 1em;
             color: gray;
         }
     }
@@ -534,7 +526,7 @@ a {
     position: relative;
     display: block;
     &.new::after {
-        content: 'New';
+        content: 'Nouveau';
         position: absolute;
         top: 1rem;
         right: 1rem;
@@ -589,9 +581,8 @@ a {
                 font-weight: 700;
             }
             .restaurant_card_location {
-                font-size: 0.9em;
+                font-size: 1em;
                 font-weight: 300;
-                color: gray;
                 margin-top: 5px;
             }
         }

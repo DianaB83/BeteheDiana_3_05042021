@@ -257,8 +257,10 @@ a {
   text-shadow: 0 0 3px white;
 }
 
-.header {
-  padding: 0 0 4rem 0;
+.header a {
+  display: flex;
+  justify-content: center;
+  padding: 2em;
 }
 .header .location {
   text-align: center;
@@ -266,18 +268,6 @@ a {
   background-color: #dadada;
   font-weight: 600;
   color: #424242;
-}
-.header .location .img {
-  text-align: center;
-  padding: 1.2rem 0;
-  font-size: 2.2em;
-  font-weight: 900;
-  font-family: "Shrikhand", cursive;
-  box-shadow: 0 0 0.7rem 0.2rem #949494;
-  width: 100%;
-  background-color: white;
-  position: relative;
-  z-index: 999;
 }
 .header .location span {
   margin-right: 18px;
@@ -293,11 +283,11 @@ a {
 .header .intro .intro_title {
   font-size: 1.3em;
   font-weight: 800;
-  margin-bottom: 40px;
+  text-align: center;
 }
 .header .intro .intro_text {
   text-align: center;
-  margin-bottom: 4rem;
+  padding: 1em;
   color: gray;
 }
 .header .help .help_title {
@@ -534,7 +524,7 @@ a {
   box-shadow: 0 0 0.8rem rgba(134, 134, 134, 0.432);
 }
 .restaurant_card.new::after {
-  content: "New";
+  content: "Nouveau";
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -586,9 +576,8 @@ a {
 }
 .restaurant_card .restaurant_card_body .text .restaurant_card_location,
 .restaurant_card .restaurant_card_body .like .restaurant_card_location {
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: 300;
-  color: gray;
   margin-top: 5px;
 }
 .restaurant_card .restaurant_card_body .like {

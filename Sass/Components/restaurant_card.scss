@@ -2,7 +2,7 @@
     position: relative;
     display: block;
     &.new::after {
-        content: 'New';
+        content: 'Nouveau';
         position: absolute;
         top: 1rem;
         right: 1rem;
