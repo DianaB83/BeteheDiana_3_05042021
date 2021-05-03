@@ -1,16 +1,16 @@
-@import "./utils/variables";
-@import "./components/introaction";
-@import "./components/like";
-@import "./components/footer";
-@import "./components/restaurant_card";
-@import "./layout/container";
-@import "./layout/header";
-@import "./layout/container";
+@import "./utils/variable.scss";
+@import "./components/introaction.scss";
+@import "./components/like.scss";
+@import "./components/footer.scss";
+@import "./components/restaurant_card.scss";
+@import "./layout/container.scss";
+@import "./layout/header.scss";
+@import "./layout/container.scss";
 
 /* STYLE OF PAGE */
 
-@import "./pages/menu";
+@import "./pages/menu.scss";
 
 /* CSS pour les grand ecran  */
 
-@import "./base/media";
+@import "./base/media.scss";

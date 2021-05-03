@@ -1,17 +1,27 @@
-/* Error: Undefined variable.
- *    ,
- * 16 |         color: $primary;
- *    |                ^^^^^^^^
- *    '
- *   Sass\Components\like.scss 16:16  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 16 \2502          color: $primary;\d\a    \2502                 ^^^^^^^^\a    \2575 \a   Sass\\Components\\like.scss 16:16  root stylesheet";
+.like {
+  position: relative;
+  padding-right: 30px;
 }
+.like span {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 1.6em;
+  cursor: pointer;
+}
+.like .fas {
+  display: none;
+  color: #9356DC;
+}
+.like .far:hover {
+  display: none;
+}
+.like .far:hover ~ .fas {
+  display: block;
+}
+.like .fas:hover {
+  display: block;
+}
+
+/*# sourceMappingURL=like.css.map */

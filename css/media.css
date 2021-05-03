@@ -35,10 +35,6 @@
     margin: 0;
     transform: translateY(-50%);
   }
-  .header .help .help_steps ul .step:hover .number {
-    box-shadow: 0 0 10px gray;
-    transform: translateY(-50%) scale(1.1);
-  }
   .header .help .help_steps ul .step .fas {
     margin: 0;
     margin-bottom: 20px;
