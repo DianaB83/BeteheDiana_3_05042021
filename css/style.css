@@ -178,7 +178,6 @@ a {
     height: 50px;
     line-height: 50px;
     margin: 0;
-    transform: translateY(-50%);
   }
   .header .help .help_steps ul .step .fas {
     margin: 0;
@@ -246,10 +245,29 @@ a {
     flex-basis: 45%;
   }
 }
+.intro_action {
+  border: none;
+  padding: 18px 30px;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  border-radius: 40px;
+  font-size: 1.2em;
+  color: white;
+  box-shadow: 0 0 3px rgba(160, 160, 160, 0.849);
+  cursor: pointer;
+  text-shadow: 0 0 3px white;
+}
+
 .header {
   padding: 0 0 4rem 0;
 }
-.header .site_title {
+.header .location {
+  text-align: center;
+  padding: 1.2rem;
+  background-color: #dadada;
+  font-weight: 600;
+  color: #424242;
+}
+.header .location .img {
   text-align: center;
   padding: 1.2rem 0;
   font-size: 2.2em;
@@ -260,13 +278,6 @@ a {
   background-color: white;
   position: relative;
   z-index: 999;
-}
-.header .location {
-  text-align: center;
-  padding: 1.2rem;
-  background-color: #dadada;
-  font-weight: 600;
-  color: #424242;
 }
 .header .location span {
   margin-right: 18px;
@@ -575,7 +586,7 @@ a {
 }
 .restaurant_card .restaurant_card_body .text .restaurant_card_location,
 .restaurant_card .restaurant_card_body .like .restaurant_card_location {
-  font-size: 1.3em;
+  font-size: 0.9em;
   font-weight: 300;
   color: gray;
   margin-top: 5px;

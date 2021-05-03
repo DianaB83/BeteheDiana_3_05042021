@@ -1,0 +1,15 @@
+.intro_action {
+    border: none;
+    padding: 18px 30px;
+    background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    border-radius: 40px;
+    font-size: 1.2em;
+    color: white;
+    box-shadow: 0 0 3px rgba(160, 160, 160, 0.849);
+    cursor: pointer;
+    text-shadow: 0 0 3px white;
+    &:active,
+    &:focus {
+        outline: 0;
+    }
+}

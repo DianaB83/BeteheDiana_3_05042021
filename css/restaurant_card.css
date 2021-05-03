@@ -54,12 +54,12 @@
 }
 .restaurant_card .restaurant_card_body .text .restaurant_card_title,
 .restaurant_card .restaurant_card_body .like .restaurant_card_title {
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 700;
 }
 .restaurant_card .restaurant_card_body .text .restaurant_card_location,
 .restaurant_card .restaurant_card_body .like .restaurant_card_location {
-  font-size: 1.3em;
+  font-size: 0.9em;
   font-weight: 300;
   color: gray;
   margin-top: 5px;

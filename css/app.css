@@ -1,4 +1,19 @@
 @charset "UTF-8";
+.intro_action {
+  border: none;
+  padding: 18px 30px;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  border-radius: 40px;
+  font-size: 1.2em;
+  color: white;
+  box-shadow: 0 0 3px rgba(160, 160, 160, 0.849);
+  cursor: pointer;
+  text-shadow: 0 0 3px white;
+}
+.intro_action:active, .intro_action:focus {
+  outline: 0;
+}
+
 .like {
   position: relative;
   padding-right: 30px;
@@ -8,10 +23,8 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
   font-size: 1.6em;
   cursor: pointer;
-  transition: all 1s ease;
 }
 .like .fas {
   display: none;
@@ -73,15 +86,10 @@
 .restaurant_card {
   position: relative;
   display: block;
-  transition: all 0.3s ease-in-out;
   border-radius: 1rem;
   overflow: hidden;
   margin-bottom: 1.3rem;
   box-shadow: 0 0 0.8rem rgba(134, 134, 134, 0.432);
-}
-.restaurant_card:hover {
-  transform: translateY(-5px) scale(1.01);
-  box-shadow: 0 0 10px gray;
 }
 .restaurant_card.new::after {
   content: "New";
@@ -101,47 +109,47 @@
 .restaurant_card .image4 {
   width: 100%;
   height: 13rem;
-  background-image: url("images/restaurants/la_palette_du_gout.jpg");
+  background-image: url("../../images/restaurants/la_palette_du_gout.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
 }
 .restaurant_card .image2 {
-  background-image: url("images/restaurants/La_note_enchantee.jpg");
+  background-image: url("../../images/restaurants/La_note_enchantee.jpg");
   background-position: center;
   background-position-y: 60%;
 }
 .restaurant_card .image3 {
-  background-image: url("images/restaurants/A_la_francaise.jpg");
+  background-image: url("../../images/restaurants/A_la_francaise.jpg");
   background-size: cover;
   background-position: bottom;
 }
 .restaurant_card .image4 {
-  background-image: url("images/restaurants/le_delice_des_sens.jpg");
+  background-image: url("../../images/restaurants/le_delice_des_sens.jpg");
 }
-.restaurant_card .restaurant_card-body {
+.restaurant_card .restaurant_card_body {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: white;
 }
-.restaurant_card .restaurant_card-body .text,
-.restaurant_card .restaurant_card-body .like {
+.restaurant_card .restaurant_card_body .text,
+.restaurant_card .restaurant_card_body .like {
   margin: 20px 15px;
 }
-.restaurant_card .restaurant_card-body .text .restaurant_card-title,
-.restaurant_card .restaurant_card-body .like .restaurant_card-title {
-  font-size: 1.2em;
+.restaurant_card .restaurant_card_body .text .restaurant_card_title,
+.restaurant_card .restaurant_card_body .like .restaurant_card_title {
+  font-size: 1.1em;
   font-weight: 700;
 }
-.restaurant_card .restaurant_card-body .text .restaurant_card-location,
-.restaurant_card .restaurant_card-body .like .restaurant_card-location {
-  font-size: 1.3em;
+.restaurant_card .restaurant_card_body .text .restaurant_card_location,
+.restaurant_card .restaurant_card_body .like .restaurant_card_location {
+  font-size: 0.9em;
   font-weight: 300;
   color: gray;
   margin-top: 5px;
 }
-.restaurant_card .restaurant_card-body .like {
+.restaurant_card .restaurant_card_body .like {
   display: block;
 }
 
@@ -157,18 +165,6 @@
 
 .header {
   padding: 0 0 4rem 0;
-}
-.header .site_title {
-  text-align: center;
-  padding: 1.2rem 0;
-  font-size: 2.2em;
-  font-weight: 900;
-  font-family: "Shrikhand", cursive;
-  box-shadow: 0 0 0.7rem 0.2rem #949494;
-  width: 100%;
-  background-color: white;
-  position: relative;
-  z-index: 999;
 }
 .header .location {
   text-align: center;
@@ -225,7 +221,6 @@
   font-weight: 600;
   display: flex;
   align-items: center;
-  box-shadow: 0 0.1rem 0.2rem 0.2rem rgba(167, 167, 167, 0.699);
 }
 .header .help .help_steps ul .step .number {
   display: inline-block;
@@ -292,6 +287,9 @@ Page de Palette du goût
 .menu_header .back a {
   display: inline-block;
 }
+.menu_header .back a:hover {
+  color: #9356DC;
+}
 .menu_header .back a span {
   font-size: 1.6em;
   font-weight: 800;
@@ -300,6 +298,7 @@ Page de Palette du goût
   content: "";
   height: 100%;
   width: 100%;
+  background-color: #9356DC;
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -368,6 +367,7 @@ Page de Palette du goût
   bottom: 0;
   left: 0;
   height: 4px;
+  background-color: #99E2D0;
   border-radius: 4px;
 }
 .menu_main .menu .button_order {
@@ -376,6 +376,60 @@ Page de Palette du goût
 }
 .menu_main .menu .button_order .order {
   padding: 15px 70px;
+}
+
+.group_item.item1 {
+  animation: fade-in 1s ease-in-out forwards;
+  -webkit-animation: fade-in 1s ease-in-out forwards;
+  -moz-animation: fade-in 1s ease-in-out forwards;
+}
+
+.group_item.item2 {
+  animation: fade-in 1s 0.2s ease-in-out forwards;
+  -webkit-animation: fade-in 1s 0.2s ease-in-out forwards;
+  -moz-animation: fade-in 1s 0.2s ease-in-out forwards;
+}
+
+.group_item.item3 {
+  animation: fade-in 1s 0.4s ease-in-out forwards;
+  -webkit-animation: fade-in 1s 0.4s ease-in-out forwards;
+  -moz-animation: fade-in 1s 0.4s ease-in-out forwards;
+}
+
+.group_item.item4 {
+  animation: fade-in 1s 0.6s ease-in-out forwards;
+  -webkit-animation: fade-in 1s 0.6s ease-in-out forwards;
+  -moz-animation: fade-in 1s 0.6s ease-in-out forwards;
+}
+
+.group_item.item5 {
+  animation: fade-in 1s 0.8s ease-in-out forwards;
+  -webkit-animation: fade-in 1s 0.8s ease-in-out forwards;
+  -moz-animation: fade-in 1s 0.8s ease-in-out forwards;
+}
+
+.group_item.item6 {
+  animation: fade-in 1s 1s ease-in-out forwards;
+  -webkit-animation: fade-in 1s 1s ease-in-out forwards;
+  -moz-animation: fade-in 1s 1s ease-in-out forwards;
+}
+
+.group_item.item7 {
+  animation: fade-in 1s 1.2s ease-in-out forwards;
+  -webkit-animation: fade-in 1s 1.2s ease-in-out forwards;
+  -moz-animation: fade-in 1s 1.2s ease-in-out forwards;
+}
+
+.group_item.item8 {
+  animation: fade-in 1s 1.4s ease-in-out forwards;
+  -webkit-animation: fade-in 1s 1.4s ease-in-out forwards;
+  -moz-animation: fade-in 1s 1.4s ease-in-out forwards;
+}
+
+.group_item.item9 {
+  animation: fade-in 1s 1.6s ease-in-out forwards;
+  -webkit-animation: fade-in 1s 1.6s ease-in-out forwards;
+  -moz-animation: fade-in 1s 1.6s ease-in-out forwards;
 }
 
 /* CSS pour les grand ecran  */
@@ -415,10 +469,6 @@ Page de Palette du goût
     line-height: 50px;
     margin: 0;
     transform: translateY(-50%);
-  }
-  .header .help .help_steps ul .step:hover .number {
-    box-shadow: 0 0 10px gray;
-    transform: translateY(-50%) scale(1.1);
   }
   .header .help .help_steps ul .step .fas {
     margin: 0;
