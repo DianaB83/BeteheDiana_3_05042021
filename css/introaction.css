@@ -12,5 +12,9 @@
 .intro_action:active, .intro_action:focus {
   outline: 0;
 }
+.intro_action:hover {
+  background: linear-gradient(to bottom right, #9356DC, #FF79DA);
+  transform: scale(1.01);
+}
 
 /*# sourceMappingURL=introaction.css.map */

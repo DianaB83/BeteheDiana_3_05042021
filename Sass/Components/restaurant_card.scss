@@ -1,6 +1,11 @@
 .restaurant_card {
     position: relative;
     display: block;
+    transition: all .3s ease-in-out;
+    &:hover {
+        transform: translateY(-5px) scale(1.01);
+        box-shadow: 0 0 10px gray;
+    }
     &.new::after {
         content: 'Nouveau';
         position: absolute;

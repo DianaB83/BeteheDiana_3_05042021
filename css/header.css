@@ -1,6 +1,11 @@
 .header {
   padding: 0 0 4rem 0;
 }
+.header a {
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+}
 .header .location {
   text-align: center;
   padding: 1.2rem;
@@ -22,10 +27,11 @@
 .header .intro .intro_title {
   font-size: 1.3em;
   font-weight: 800;
-  margin-bottom: 40px;
+  text-align: center;
 }
 .header .intro .intro_text {
   text-align: center;
+  padding: 1em;
   margin-bottom: 4rem;
   color: gray;
 }
@@ -56,6 +62,7 @@
   font-weight: 600;
   display: flex;
   align-items: center;
+  transition: all 0.4s ease-in-out;
 }
 .header .help .help_steps ul .step .number {
   display: inline-block;
@@ -69,6 +76,7 @@
   border-radius: 50%;
   margin-left: -1rem;
   margin-right: 2rem;
+  transition: all 0.4s ease-in-out;
 }
 .header .help .help_steps ul .step.active {
   background-color: #9256dc1c;
@@ -83,6 +91,11 @@
 }
 .header .help .help_steps ul .step:hover .number {
   box-shadow: 0 0 10px gray;
+  transform: scale(1.1);
+}
+.header .help .help_steps ul .step:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 0.1rem 0.2rem 0.2rem rgba(167, 167, 167, 0.699);
 }
 
 /*# sourceMappingURL=header.css.map */

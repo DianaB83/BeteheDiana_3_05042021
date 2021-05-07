@@ -143,12 +143,17 @@ a {
   display: none;
 }
 
-@media (max-width: 990px) {
+@media (max-width: 1280px) {
   .site {
     width: 100%;
   }
+
+  .menu .group {
+    width: 28%;
+    margin: auto;
+  }
 }
-@media (min-width: 990px) {
+@media (min-width: 1280px) {
   .site {
     width: 75%;
     margin: 0 auto;
@@ -178,6 +183,11 @@ a {
     height: 50px;
     line-height: 50px;
     margin: 0;
+    transform: translateY(-50%);
+  }
+  .header .help .help_steps ul .step:hover .number {
+    box-shadow: 0 0 10px gray;
+    transform: translateY(-50%) scale(1.1);
   }
   .header .help .help_steps ul .step .fas {
     margin: 0;
@@ -244,6 +254,33 @@ a {
   .restaurants .restaurant_card {
     flex-basis: 45%;
   }
+
+  .menu_main header.image {
+    height: 25rem;
+    background-position: center center;
+  }
+
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .menu header,
+.menu .button_order {
+    flex-basis: 100%;
+  }
+  .menu header span {
+    cursor: pointer;
+  }
+  .menu header span:hover {
+    display: none;
+  }
+  .menu .group {
+    width: 45%;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #c4c4c4;
+    padding: 20px;
+  }
 }
 .intro_action {
   border: none;
@@ -256,7 +293,17 @@ a {
   cursor: pointer;
   text-shadow: 0 0 3px white;
 }
+.intro_action:active, .intro_action:focus {
+  outline: 0;
+}
+.intro_action:hover {
+  background: linear-gradient(to bottom right, #9356DC, #FF79DA);
+  transform: scale(1.01);
+}
 
+.header {
+  padding: 0 0 4rem 0;
+}
 .header a {
   display: flex;
   justify-content: center;
@@ -288,6 +335,7 @@ a {
 .header .intro .intro_text {
   text-align: center;
   padding: 1em;
+  margin-bottom: 4rem;
   color: gray;
 }
 .header .help .help_title {
@@ -317,6 +365,7 @@ a {
   font-weight: 600;
   display: flex;
   align-items: center;
+  transition: all 0.4s ease-in-out;
 }
 .header .help .help_steps ul .step .number {
   display: inline-block;
@@ -330,6 +379,7 @@ a {
   border-radius: 50%;
   margin-left: -1rem;
   margin-right: 2rem;
+  transition: all 0.4s ease-in-out;
 }
 .header .help .help_steps ul .step.active {
   background-color: #9256dc1c;
@@ -344,8 +394,10 @@ a {
 }
 .header .help .help_steps ul .step:hover .number {
   box-shadow: 0 0 10px gray;
+  transform: scale(1.1);
 }
 .header .help .help_steps ul .step:hover {
+  transform: translateY(-5px) scale(1.03);
   box-shadow: 0 0.1rem 0.2rem 0.2rem rgba(167, 167, 167, 0.699);
 }
 
@@ -420,6 +472,60 @@ a {
   padding: 15px 70px;
 }
 
+.group_item.item1 {
+  animation: fade-in 1s ease-in-out forwards;
+  -webkit-animation: fade-in 1s ease-in-out forwards;
+  -moz-animation: fade-in 1s ease-in-out forwards;
+}
+
+.group_item.item2 {
+  animation: fade-in 1s 0.2s ease-in-out forwards;
+  -webkit-animation: fade-in 1s 0.2s ease-in-out forwards;
+  -moz-animation: fade-in 1s 0.2s ease-in-out forwards;
+}
+
+.group_item.item3 {
+  animation: fade-in 1s 0.4s ease-in-out forwards;
+  -webkit-animation: fade-in 1s 0.4s ease-in-out forwards;
+  -moz-animation: fade-in 1s 0.4s ease-in-out forwards;
+}
+
+.group_item.item4 {
+  animation: fade-in 1s 0.6s ease-in-out forwards;
+  -webkit-animation: fade-in 1s 0.6s ease-in-out forwards;
+  -moz-animation: fade-in 1s 0.6s ease-in-out forwards;
+}
+
+.group_item.item5 {
+  animation: fade-in 1s 0.8s ease-in-out forwards;
+  -webkit-animation: fade-in 1s 0.8s ease-in-out forwards;
+  -moz-animation: fade-in 1s 0.8s ease-in-out forwards;
+}
+
+.group_item.item6 {
+  animation: fade-in 1s 1s ease-in-out forwards;
+  -webkit-animation: fade-in 1s 1s ease-in-out forwards;
+  -moz-animation: fade-in 1s 1s ease-in-out forwards;
+}
+
+.group_item.item7 {
+  animation: fade-in 1s 1.2s ease-in-out forwards;
+  -webkit-animation: fade-in 1s 1.2s ease-in-out forwards;
+  -moz-animation: fade-in 1s 1.2s ease-in-out forwards;
+}
+
+.group_item.item8 {
+  animation: fade-in 1s 1.4s ease-in-out forwards;
+  -webkit-animation: fade-in 1s 1.4s ease-in-out forwards;
+  -moz-animation: fade-in 1s 1.4s ease-in-out forwards;
+}
+
+.group_item.item9 {
+  animation: fade-in 1s 1.6s ease-in-out forwards;
+  -webkit-animation: fade-in 1s 1.6s ease-in-out forwards;
+  -moz-animation: fade-in 1s 1.6s ease-in-out forwards;
+}
+
 .group_item {
   margin-top: 16px;
   display: flex;
@@ -431,6 +537,8 @@ a {
   overflow: hidden;
   top: 20px;
   height: 72px;
+  transition: all 0.2s ease;
+  cursor: pointer;
 }
 .group_item .group_item_description {
   flex-basis: 100%;
@@ -470,11 +578,15 @@ a {
   justify-content: center;
   background-color: #99E2D0;
   display: none;
+  transition: all 0.4s ease;
   display: flex;
   width: 0;
   overflow: hidden;
   color: white;
   font-size: 1.6em;
+}
+.group_item .group_item_selected span {
+  transition: all 0.4s;
 }
 .group_item:hover .group_item_description {
   width: 75%;
@@ -489,39 +601,18 @@ a {
   width: 25%;
 }
 
-.like {
-  position: relative;
-  padding-right: 30px;
-}
-.like span {
-  display: inline-block;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  font-size: 1.6em;
-  cursor: pointer;
-}
-.like .fas {
-  display: none;
-  color: #9356DC;
-}
-.like .far:hover {
-  display: none;
-}
-.like .far:hover ~ .fas {
-  display: block;
-}
-.like .fas:hover {
-  display: block;
-}
-
 .restaurant_card {
   position: relative;
   display: block;
+  transition: all 0.3s ease-in-out;
   border-radius: 1rem;
   overflow: hidden;
   margin-bottom: 1.3rem;
   box-shadow: 0 0 0.8rem rgba(134, 134, 134, 0.432);
+}
+.restaurant_card:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 0 10px gray;
 }
 .restaurant_card.new::after {
   content: "Nouveau";
@@ -593,8 +684,10 @@ a {
   position: absolute;
   left: 50%;
   top: 50%;
+  transform: translate(-50%, -50%);
   font-size: 1.6em;
   cursor: pointer;
+  transition: all 1s ease;
 }
 .like .fas {
   display: none;

@@ -1,10 +1,15 @@
 .restaurant_card {
   position: relative;
   display: block;
+  transition: all 0.3s ease-in-out;
   border-radius: 1rem;
   overflow: hidden;
   margin-bottom: 1.3rem;
   box-shadow: 0 0 0.8rem rgba(134, 134, 134, 0.432);
+}
+.restaurant_card:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 0 10px gray;
 }
 .restaurant_card.new::after {
   content: "Nouveau";

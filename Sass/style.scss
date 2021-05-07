@@ -143,13 +143,17 @@ a {
     display: none;
 }
 
-@media (max-width: 990px) {
+@media (max-width: 1280px) {
     .site {
         width: 100%
     }
+    .menu .group {
+        width: 28%;
+        margin: auto;
+    }
 }
 
-@media (min-width: 990px) {
+@media (min-width: 1280px) {
     .site {
         width: 75%;
         margin: 0 auto;
@@ -177,6 +181,11 @@ a {
                     height: 50px;
                     line-height: 50px;
                     margin: 0;
+                    transform: translateY(-50%);
+                }
+                &:hover .number {
+                    box-shadow: 0 0 10px gray;
+                    transform: translateY(-50%) scale(1.1);
                 }
                 .fas {
                     margin: 0;
@@ -246,6 +255,31 @@ a {
             flex-basis: 45%;
         }
     }
+    .menu_main header.image {
+        height: 25rem;
+        background-position: center center;
+    }
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        header,
+        .button_order {
+            flex-basis: 100%;
+        }
+        header span {
+            cursor: pointer;
+        }
+        header span:hover {
+            display: none;
+        }
+        .group {
+            width: 45%;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgb(196, 196, 196);
+            padding: 20px
+        }
+    }
 }
 
 .intro_action {
@@ -258,9 +292,18 @@ a {
     box-shadow: 0 0 3px rgba(160, 160, 160, 0.849);
     cursor: pointer;
     text-shadow: 0 0 3px white;
+    &:active,
+    &:focus {
+        outline: 0;
+    }
+    &:hover {
+        background: linear-gradient(to bottom right, #9356DC, #FF79DA);
+        transform: scale(1.01);
+    }
 }
 
 .header {
+    padding: 0 0 4rem 0;
     a {
         display: flex;
         justify-content: center;
@@ -291,6 +334,7 @@ a {
         .intro_text {
             text-align: center;
             padding: 1em;
+            margin-bottom: 4rem;
             color: gray;
         }
     }
@@ -321,6 +365,7 @@ a {
                 font-weight: 600;
                 display: flex;
                 align-items: center;
+                transition: all .4s ease-in-out;
                 .number {
                     display: inline-block;
                     height: 2rem;
@@ -333,6 +378,7 @@ a {
                     border-radius: 50%;
                     margin-left: -1rem;
                     margin-right: 2rem;
+                    transition: all .4s ease-in-out;
                 }
                 &.active {
                     .fas {
@@ -347,8 +393,10 @@ a {
                 }
                 &:hover .number {
                     box-shadow: 0 0 10px gray;
+                    transform: scale(1.1);
                 }
                 &:hover {
+                    transform: translateY(-5px) scale(1.03);
                     box-shadow: 0 .1rem .2rem .2rem rgba(167, 167, 167, 0.699);
                 }
             }
@@ -427,6 +475,60 @@ a {
     }
 }
 
+.group_item.item1 {
+    animation: fade-in 1s ease-in-out forwards;
+    -webkit-animation: fade-in 1s ease-in-out forwards;
+    -moz-animation: fade-in 1s ease-in-out forwards;
+}
+
+.group_item.item2 {
+    animation: fade-in 1s .2s ease-in-out forwards;
+    -webkit-animation: fade-in 1s .2s ease-in-out forwards;
+    -moz-animation: fade-in 1s .2s ease-in-out forwards;
+}
+
+.group_item.item3 {
+    animation: fade-in 1s .4s ease-in-out forwards;
+    -webkit-animation: fade-in 1s .4s ease-in-out forwards;
+    -moz-animation: fade-in 1s .4s ease-in-out forwards;
+}
+
+.group_item.item4 {
+    animation: fade-in 1s .6s ease-in-out forwards;
+    -webkit-animation: fade-in 1s .6s ease-in-out forwards;
+    -moz-animation: fade-in 1s .6s ease-in-out forwards;
+}
+
+.group_item.item5 {
+    animation: fade-in 1s .8s ease-in-out forwards;
+    -webkit-animation: fade-in 1s .8s ease-in-out forwards;
+    -moz-animation: fade-in 1s .8s ease-in-out forwards;
+}
+
+.group_item.item6 {
+    animation: fade-in 1s 1s ease-in-out forwards;
+    -webkit-animation: fade-in 1s 1s ease-in-out forwards;
+    -moz-animation: fade-in 1s 1s ease-in-out forwards;
+}
+
+.group_item.item7 {
+    animation: fade-in 1s 1.2s ease-in-out forwards;
+    -webkit-animation: fade-in 1s 1.2s ease-in-out forwards;
+    -moz-animation: fade-in 1s 1.2s ease-in-out forwards;
+}
+
+.group_item.item8 {
+    animation: fade-in 1s 1.4s ease-in-out forwards;
+    -webkit-animation: fade-in 1s 1.4s ease-in-out forwards;
+    -moz-animation: fade-in 1s 1.4s ease-in-out forwards;
+}
+
+.group_item.item9 {
+    animation: fade-in 1s 1.6s ease-in-out forwards;
+    -webkit-animation: fade-in 1s 1.6s ease-in-out forwards;
+    -moz-animation: fade-in 1s 1.6s ease-in-out forwards;
+}
+
 .group_item {
     margin-top: 16px;
     display: flex;
@@ -438,6 +540,8 @@ a {
     overflow: hidden;
     top: 20px;
     height: 72px;
+    transition: all .2s ease;
+    cursor: pointer;
     .group_item_description {
         flex-basis: 100%;
         display: flex;
@@ -471,16 +575,21 @@ a {
             flex-basis: 30%;
         }
     }
+    //variables//
     .group_item_selected {
         align-items: center;
         justify-content: center;
         background-color: #99E2D0;
         display: none;
+        transition: all 0.4s ease;
         display: flex;
         width: 0;
         overflow: hidden;
         color: white;
         font-size: 1.6em;
+        span {
+            transition: all .4s;
+        }
     }
     &:hover .group_item_description {
         width: 75%;
@@ -496,35 +605,14 @@ a {
     }
 }
 
-.like {
-    position: relative;
-    padding-right: 30px;
-    span {
-        display: inline-block;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        font-size: 1.6em;
-        cursor: pointer;
-    }
-    .fas {
-        display: none;
-        color: #9356DC;
-    }
-    .far:hover {
-        display: none;
-    }
-    .far:hover~.fas {
-        display: block;
-    }
-    .fas:hover {
-        display: block;
-    }
-}
-
 .restaurant_card {
     position: relative;
     display: block;
+    transition: all .3s ease-in-out;
+    &:hover {
+        transform: translateY(-5px) scale(1.01);
+        box-shadow: 0 0 10px gray;
+    }
     &.new::after {
         content: 'Nouveau';
         position: absolute;
@@ -600,8 +688,10 @@ a {
         position: absolute;
         left: 50%;
         top: 50%;
+        transform: translate(-50%, -50%);
         font-size: 1.6em;
         cursor: pointer;
+        transition: all 1s ease;
     }
     .fas {
         display: none;

@@ -12,4 +12,8 @@
     &:focus {
         outline: 0;
     }
+    &:hover {
+        background: linear-gradient(to bottom right, #9356DC, #FF79DA);
+        transform: scale(1.01);
+    }
 }
