@@ -145,17 +145,17 @@ a {
 
 @media (max-width: 1280px) {
     .site {
-        width: 100%
+        width: 100%;
     }
     .menu .group {
-        width: 28%;
+        width: 100%;
         margin: auto;
     }
 }
 
 @media (min-width: 1280px) {
     .site {
-        width: 75%;
+        width: 100%;
         margin: 0 auto;
     }
     .header .help {
@@ -175,7 +175,6 @@ a {
                 justify-content: space-between;
                 align-items: center;
                 padding: 0;
-                padding-bottom: 16px;
                 .number {
                     width: 50px;
                     height: 50px;
@@ -274,10 +273,10 @@ a {
             display: none;
         }
         .group {
-            width: 45%;
+            width: 30%;
             border-radius: 15px;
             box-shadow: 0 0 20px rgb(196, 196, 196);
-            padding: 20px
+            padding: 10px;
         }
     }
 }
@@ -334,7 +333,7 @@ a {
         .intro_text {
             text-align: center;
             padding: 1em;
-            margin-bottom: 4rem;
+            margin-bottom: 2rem;
             color: gray;
         }
     }
@@ -351,7 +350,6 @@ a {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 2rem 1.2rem 2rem 2rem;
             overflow: hidden;
             .step {
                 position: relative;
@@ -751,7 +749,7 @@ a {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
     .footer {
         .footer_title {
             text-align: center;

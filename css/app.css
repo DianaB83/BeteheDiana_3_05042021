@@ -13,6 +13,10 @@
 .intro_action:active, .intro_action:focus {
   outline: 0;
 }
+.intro_action:hover {
+  background: linear-gradient(to bottom right, #9356DC, #FF79DA);
+  transform: scale(1.01);
+}
 
 .like {
   position: relative;
@@ -23,8 +27,10 @@
   position: absolute;
   left: 50%;
   top: 50%;
+  transform: translate(-50%, -50%);
   font-size: 1.6em;
   cursor: pointer;
+  transition: all 1s ease;
 }
 .like .fas {
   display: none;
@@ -86,10 +92,15 @@
 .restaurant_card {
   position: relative;
   display: block;
+  transition: all 0.3s ease-in-out;
   border-radius: 1rem;
   overflow: hidden;
   margin-bottom: 1.3rem;
   box-shadow: 0 0 0.8rem rgba(134, 134, 134, 0.432);
+}
+.restaurant_card:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 0 10px gray;
 }
 .restaurant_card.new::after {
   content: "Nouveau";
@@ -153,6 +164,86 @@
   display: block;
 }
 
+.loader_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  z-index: 9999;
+  animation: desapear 1s linear forwards;
+  animation-delay: 3s;
+}
+
+.loader {
+  width: 8rem;
+  height: 8rem;
+  text-align: center;
+  line-height: 8rem;
+  border: 0.7rem solid #e4e4e4;
+  border-radius: 50%;
+  color: #FF79DA;
+  position: relative;
+  box-shadow: 0 0 20px 8px grey;
+}
+.loader .image {
+  height: 5rem;
+  width: 5rem;
+  background-color: #ffffff;
+  font-size: 4em;
+  position: absolute;
+  top: 1.3rem;
+  left: 1.3rem;
+  z-index: 100;
+  animation: ecrase 3s linear forwards;
+}
+.loader span {
+  font-size: 4em;
+  line-height: 8rem;
+  color: #FF79DA;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  top: -0.5rem;
+  left: -0.5rem;
+  width: 8rem;
+  height: 8rem;
+  background-color: transparent;
+  border: 0.5rem solid rgba(128, 128, 128, 0.548);
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: rotate 3s ease-in-out infinite reverse;
+}
+
+.loader::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: 8rem;
+  height: 8rem;
+  border: 8px solid transparent;
+  background-color: transparent;
+  border-radius: 50%;
+  border-top-color: #FF79DA;
+  animation: rotate 1s ease-in-out infinite;
+}
+
 .main {
   background-color: #f0f0f0;
   padding: 4rem 1.1rem;
@@ -165,6 +256,11 @@
 
 .header {
   padding: 0 0 4rem 0;
+}
+.header a {
+  display: flex;
+  justify-content: center;
+  padding: 2em;
 }
 .header .location {
   text-align: center;
@@ -187,10 +283,11 @@
 .header .intro .intro_title {
   font-size: 1.3em;
   font-weight: 800;
-  margin-bottom: 40px;
+  text-align: center;
 }
 .header .intro .intro_text {
   text-align: center;
+  padding: 1em;
   margin-bottom: 4rem;
   color: gray;
 }
@@ -221,6 +318,7 @@
   font-weight: 600;
   display: flex;
   align-items: center;
+  transition: all 0.4s ease-in-out;
 }
 .header .help .help_steps ul .step .number {
   display: inline-block;
@@ -234,6 +332,7 @@
   border-radius: 50%;
   margin-left: -1rem;
   margin-right: 2rem;
+  transition: all 0.4s ease-in-out;
 }
 .header .help .help_steps ul .step.active {
   background-color: #9256dc1c;
@@ -248,6 +347,91 @@
 }
 .header .help .help_steps ul .step:hover .number {
   box-shadow: 0 0 10px gray;
+  transform: scale(1.1);
+}
+.header .help .help_steps ul .step:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 0.1rem 0.2rem 0.2rem rgba(167, 167, 167, 0.699);
+}
+
+.loader_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  z-index: 9999;
+  animation: desapear 1s linear forwards;
+  animation-delay: 3s;
+}
+
+.loader {
+  width: 8rem;
+  height: 8rem;
+  text-align: center;
+  line-height: 8rem;
+  border: 0.7rem solid #e4e4e4;
+  border-radius: 50%;
+  color: #FF79DA;
+  position: relative;
+  box-shadow: 0 0 20px 8px grey;
+}
+.loader .image {
+  height: 5rem;
+  width: 5rem;
+  background-color: #ffffff;
+  font-size: 4em;
+  position: absolute;
+  top: 1.3rem;
+  left: 1.3rem;
+  z-index: 100;
+  animation: ecrase 3s linear forwards;
+}
+.loader span {
+  font-size: 4em;
+  line-height: 8rem;
+  color: #FF79DA;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  top: -0.5rem;
+  left: -0.5rem;
+  width: 8rem;
+  height: 8rem;
+  background-color: transparent;
+  border: 0.5rem solid rgba(128, 128, 128, 0.548);
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: rotate 3s ease-in-out infinite reverse;
+}
+
+.loader::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: 8rem;
+  height: 8rem;
+  border: 8px solid transparent;
+  background-color: transparent;
+  border-radius: 50%;
+  border-top-color: #FF79DA;
+  animation: rotate 1s ease-in-out infinite;
 }
 
 .main {
@@ -433,14 +617,19 @@ Page de Palette du goût
 }
 
 /* CSS pour les grand ecran  */
-@media (max-width: 990px) {
+@media (max-width: 1280px) {
   .site {
     width: 100%;
   }
+
+  .menu .group {
+    margin: auto;
+    width: 100%;
+  }
 }
-@media (min-width: 990px) {
+@media (min-width: 1280px) {
   .site {
-    width: 75%;
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -461,7 +650,6 @@ Page de Palette du goût
     justify-content: space-between;
     align-items: center;
     padding: 0;
-    padding-bottom: 16px;
   }
   .header .help .help_steps ul .step .number {
     width: 50px;
@@ -517,10 +705,10 @@ Page de Palette du goût
     display: none;
   }
   .menu .group {
-    width: 45%;
+    width: 30%;
     border-radius: 15px;
     box-shadow: 0 0 20px #c4c4c4;
-    padding: 20px;
+    padding: 10px;
   }
 }
 .header .intro {
