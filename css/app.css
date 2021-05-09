@@ -1,23 +1,3 @@
-@charset "UTF-8";
-.intro_action {
-  border: none;
-  padding: 18px 30px;
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  border-radius: 40px;
-  font-size: 1.2em;
-  color: white;
-  box-shadow: 0 0 3px rgba(160, 160, 160, 0.849);
-  cursor: pointer;
-  text-shadow: 0 0 3px white;
-}
-.intro_action:active, .intro_action:focus {
-  outline: 0;
-}
-.intro_action:hover {
-  background: linear-gradient(to bottom right, #9356DC, #FF79DA);
-  transform: scale(1.01);
-}
-
 .like {
   position: relative;
   padding-right: 30px;
@@ -30,6 +10,7 @@
   transform: translate(-50%, -50%);
   font-size: 1.6em;
   cursor: pointer;
+  animation: progress-heart 0.8s ease;
   transition: all 1s ease;
 }
 .like .fas {
@@ -445,9 +426,6 @@
 }
 
 /* STYLE OF PAGE */
-/**
-Page de Palette du goût
-*/
 .menu_header {
   position: relative;
   padding: 0;
@@ -562,60 +540,6 @@ Page de Palette du goût
   padding: 15px 70px;
 }
 
-.group_item.item1 {
-  animation: fade-in 1s ease-in-out forwards;
-  -webkit-animation: fade-in 1s ease-in-out forwards;
-  -moz-animation: fade-in 1s ease-in-out forwards;
-}
-
-.group_item.item2 {
-  animation: fade-in 1s 0.2s ease-in-out forwards;
-  -webkit-animation: fade-in 1s 0.2s ease-in-out forwards;
-  -moz-animation: fade-in 1s 0.2s ease-in-out forwards;
-}
-
-.group_item.item3 {
-  animation: fade-in 1s 0.4s ease-in-out forwards;
-  -webkit-animation: fade-in 1s 0.4s ease-in-out forwards;
-  -moz-animation: fade-in 1s 0.4s ease-in-out forwards;
-}
-
-.group_item.item4 {
-  animation: fade-in 1s 0.6s ease-in-out forwards;
-  -webkit-animation: fade-in 1s 0.6s ease-in-out forwards;
-  -moz-animation: fade-in 1s 0.6s ease-in-out forwards;
-}
-
-.group_item.item5 {
-  animation: fade-in 1s 0.8s ease-in-out forwards;
-  -webkit-animation: fade-in 1s 0.8s ease-in-out forwards;
-  -moz-animation: fade-in 1s 0.8s ease-in-out forwards;
-}
-
-.group_item.item6 {
-  animation: fade-in 1s 1s ease-in-out forwards;
-  -webkit-animation: fade-in 1s 1s ease-in-out forwards;
-  -moz-animation: fade-in 1s 1s ease-in-out forwards;
-}
-
-.group_item.item7 {
-  animation: fade-in 1s 1.2s ease-in-out forwards;
-  -webkit-animation: fade-in 1s 1.2s ease-in-out forwards;
-  -moz-animation: fade-in 1s 1.2s ease-in-out forwards;
-}
-
-.group_item.item8 {
-  animation: fade-in 1s 1.4s ease-in-out forwards;
-  -webkit-animation: fade-in 1s 1.4s ease-in-out forwards;
-  -moz-animation: fade-in 1s 1.4s ease-in-out forwards;
-}
-
-.group_item.item9 {
-  animation: fade-in 1s 1.6s ease-in-out forwards;
-  -webkit-animation: fade-in 1s 1.6s ease-in-out forwards;
-  -moz-animation: fade-in 1s 1.6s ease-in-out forwards;
-}
-
 /* CSS pour les grand ecran  */
 @media (max-width: 1280px) {
   .site {
@@ -685,7 +609,7 @@ Page de Palette du goût
   }
 
   .menu_main header.image {
-    height: 25rem;
+    height: 15rem;
     background-position: center center;
   }
 

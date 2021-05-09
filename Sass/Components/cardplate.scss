@@ -1,3 +1,7 @@
+$primary: #9356DC;
+$secondary: #FF79DA;
+$tertiare: #99E2D0;
+$gray: #666666;
 .group_item {
     margin-top: 16px;
     display: flex;
@@ -7,14 +11,16 @@
     border-radius: 16px;
     box-shadow: 0 0 15px rgb(196, 196, 196);
     overflow: hidden;
+    position: relative;
     top: 20px;
     height: 72px;
+    transition: all .2s ease;
+    cursor: pointer;
     .group_item_description {
         flex-basis: 100%;
         display: flex;
         padding: 16px;
         justify-content: space-between;
-        height: 40px;
         .group_item_description_text {
             flex-basis: 70%;
             h3 {
@@ -29,7 +35,7 @@
                 white-space: nowrap;
                 font-size: 0.9em;
                 text-overflow: ellipsis;
-                color: #4e4e4e;
+                color: black;
                 overflow: hidden;
             }
         }
@@ -45,13 +51,20 @@
     .group_item_selected {
         align-items: center;
         justify-content: center;
-        background-color: #99E2D0;
+        background-color: $tertiare;
         display: none;
+        transition: all 0.4s ease;
         display: flex;
         width: 0;
         overflow: hidden;
         color: white;
         font-size: 1.6em;
+        span {
+            transition: all .4s;
+        }
+    }
+    &:hover {
+        box-shadow: 0 0 10px $tertiare;
     }
     &:hover .group_item_description {
         width: 75%;
@@ -64,5 +77,8 @@
     }
     &:hover .group_item_selected {
         width: 25%
+    }
+    &:hover .group_item_selected span {
+        transform: rotate(360deg);
     }
 }

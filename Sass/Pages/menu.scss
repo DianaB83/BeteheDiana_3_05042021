@@ -1,7 +1,3 @@
-/**
-Page de Palette du goût
-*/
-
 .menu_header {
     position: relative;
     padding: 0;
@@ -29,7 +25,7 @@ Page de Palette du goût
                 font-size: 1.6em;
                 font-weight: 800;
             }
-            //variable//
+            //variables//
             &:hover::before {
                 content: "";
                 height: 100%;
@@ -115,58 +111,4 @@ Page de Palette du goût
             }
         }
     }
-}
-
-.group_item.item1 {
-    animation: fade-in 1s ease-in-out forwards;
-    -webkit-animation: fade-in 1s ease-in-out forwards;
-    -moz-animation: fade-in 1s ease-in-out forwards;
-}
-
-.group_item.item2 {
-    animation: fade-in 1s .2s ease-in-out forwards;
-    -webkit-animation: fade-in 1s .2s ease-in-out forwards;
-    -moz-animation: fade-in 1s .2s ease-in-out forwards;
-}
-
-.group_item.item3 {
-    animation: fade-in 1s .4s ease-in-out forwards;
-    -webkit-animation: fade-in 1s .4s ease-in-out forwards;
-    -moz-animation: fade-in 1s .4s ease-in-out forwards;
-}
-
-.group_item.item4 {
-    animation: fade-in 1s .6s ease-in-out forwards;
-    -webkit-animation: fade-in 1s .6s ease-in-out forwards;
-    -moz-animation: fade-in 1s .6s ease-in-out forwards;
-}
-
-.group_item.item5 {
-    animation: fade-in 1s .8s ease-in-out forwards;
-    -webkit-animation: fade-in 1s .8s ease-in-out forwards;
-    -moz-animation: fade-in 1s .8s ease-in-out forwards;
-}
-
-.group_item.item6 {
-    animation: fade-in 1s 1s ease-in-out forwards;
-    -webkit-animation: fade-in 1s 1s ease-in-out forwards;
-    -moz-animation: fade-in 1s 1s ease-in-out forwards;
-}
-
-.group_item.item7 {
-    animation: fade-in 1s 1.2s ease-in-out forwards;
-    -webkit-animation: fade-in 1s 1.2s ease-in-out forwards;
-    -moz-animation: fade-in 1s 1.2s ease-in-out forwards;
-}
-
-.group_item.item8 {
-    animation: fade-in 1s 1.4s ease-in-out forwards;
-    -webkit-animation: fade-in 1s 1.4s ease-in-out forwards;
-    -moz-animation: fade-in 1s 1.4s ease-in-out forwards;
-}
-
-.group_item.item9 {
-    animation: fade-in 1s 1.6s ease-in-out forwards;
-    -webkit-animation: fade-in 1s 1.6s ease-in-out forwards;
-    -moz-animation: fade-in 1s 1.6s ease-in-out forwards;
 }
