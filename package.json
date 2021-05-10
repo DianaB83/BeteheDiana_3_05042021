@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
 
-        "sass": "sass --watch ./Sass/style.scss:./css/style.css ./Sass/Base/media.scss:./css/media.css ./Sass/Base/reset.scss:./reset.css ./Sass/Components/cardplate.scss:./css.cardplate.css ./Sass/Components/footer.scss:./css.footer.css ./Sass/Components/like.scss:./css/like.css ./Sass/Components/restaurant_card.scss:./css/restaurant_card.css ./Sass/Layout/container.scss:./css/container.css ./Sass/Layout/header.scss:./css/header.css ./Sass/Pages/menu.scss:./css/menu.css ./Sass/Utils/animations.scss:./css/animations.css ./Sass/Utils/variables.scss:./css/variables.css ./Sass/app.scss:./css/app.css"
+        "sass": "sass --watch ./Sass/style.scss:./css/style.css ./Sass/Base/media.scss:./css/media.css ./Sass/Components/cardplate.scss:./css.cardplate.css ./Sass/Components/footer.scss:./css.footer.css ./Sass/Components/like.scss:./css/like.css ./Sass/Components/restaurant_card.scss:./css/restaurant_card.css ./Sass/Layout/container.scss:./css/container.css ./Sass/Layout/header.scss:./css/header.css ./Sass/Pages/menu.scss:./css/menu.css ./Sass/Utils/animations.scss:./css/animations.css ./Sass/Utils/variables.scss:./css/variables.css ./Sass/app.scss:./css/app.css"
 
     },
     "repository": {
