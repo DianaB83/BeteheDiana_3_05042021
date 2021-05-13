@@ -1,3 +1,38 @@
+.container {
+  opacity: 0.5;
+  display: flex;
+  width: 50px;
+  justify-content: center;
+  align-items: center;
+  color: BLACK;
+}
+.container .icon {
+  width: 20px;
+}
 
+path {
+  fill: transparent;
+  stroke-width: 20;
+  stroke: black;
+}
+
+.container:hover svg * {
+  animation: heart 0.5s;
+  transform-origin: bottom;
+  animation-fill-mode: forwards;
+  fill: url(#grad2);
+}
+
+@keyframes heart {
+  0% {
+    transform: scale(0);
+    fill: url(#grad2);
+    stroke: transparent;
+  }
+  100% {
+    transform: scale(1);
+    stroke: transparent;
+  }
+}
 
 /*# sourceMappingURL=animations.css.map */

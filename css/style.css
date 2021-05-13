@@ -439,7 +439,7 @@ a {
   font-family: "Shrikhand", cursive;
   margin-left: 8px;
 }
-.menu_main .menu header .like {
+.menu_main .menu header .container {
   margin-right: 2rem;
 }
 .menu_main .menu .group {
@@ -676,37 +676,46 @@ a {
   font-weight: 300;
   margin-top: 5px;
 }
-.restaurant_card .restaurant_card_body .like {
+.restaurant_card .restaurant_card_body .container {
   display: block;
 }
 
-.like {
-  position: relative;
-  padding-right: 30px;
+.container {
+  opacity: 0.5;
+  display: flex;
+  width: 50px;
+  justify-content: center;
+  align-items: center;
+  color: BLACK;
 }
-.like span {
-  display: inline-block;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 1.6em;
-  cursor: pointer;
-}
-.like .fas {
-  display: none;
-  color: #9356DC;
-}
-.like .far:hover {
-  display: none;
-}
-.like .far:hover ~ .fas {
-  display: block;
-}
-.like .fas:hover {
-  display: block;
+.container .icon {
+  width: 20px;
 }
 
+path {
+  fill: transparent;
+  stroke-width: 20;
+  stroke: black;
+}
+
+.container:hover svg * {
+  animation: heart 0.5s;
+  transform-origin: bottom;
+  animation-fill-mode: forwards;
+  fill: url(#grad2);
+}
+
+@keyframes heart {
+  0% {
+    transform: scale(0);
+    fill: url(#grad2);
+    stroke: transparent;
+  }
+  100% {
+    transform: scale(1);
+    stroke: transparent;
+  }
+}
 .main {
   background-color: #f0f0f0;
   padding: 4rem 1.1rem;

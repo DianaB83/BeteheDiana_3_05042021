@@ -30,7 +30,7 @@
 .footer {
   background-color: #535353;
   color: white;
-  padding: 1.2rem;
+  padding: 10px;
 }
 .footer .footer_title {
   font-size: 1.4em;
@@ -425,7 +425,7 @@
   font-weight: 800;
 }
 
-/* STYLE OF PAGE */
+/*STYLE DE LA PAGE */
 .menu_header {
   position: relative;
   padding: 0;
@@ -538,6 +538,60 @@
 }
 .menu_main .menu .button_order .order {
   padding: 15px 70px;
+}
+
+.group_item.item1 {
+  animation: fade-in 1s ease-in-out forwards;
+  -webkit-animation: fade-in 1s ease-in-out forwards;
+  -moz-animation: fade-in 1s ease-in-out forwards;
+}
+
+.group_item.item2 {
+  animation: fade-in 1s 0.2s ease-in-out forwards;
+  -webkit-animation: fade-in 1s 0.2s ease-in-out forwards;
+  -moz-animation: fade-in 1s 0.2s ease-in-out forwards;
+}
+
+.group_item.item3 {
+  animation: fade-in 1s 0.4s ease-in-out forwards;
+  -webkit-animation: fade-in 1s 0.4s ease-in-out forwards;
+  -moz-animation: fade-in 1s 0.4s ease-in-out forwards;
+}
+
+.group_item.item4 {
+  animation: fade-in 1s 0.6s ease-in-out forwards;
+  -webkit-animation: fade-in 1s 0.6s ease-in-out forwards;
+  -moz-animation: fade-in 1s 0.6s ease-in-out forwards;
+}
+
+.group_item.item5 {
+  animation: fade-in 1s 0.8s ease-in-out forwards;
+  -webkit-animation: fade-in 1s 0.8s ease-in-out forwards;
+  -moz-animation: fade-in 1s 0.8s ease-in-out forwards;
+}
+
+.group_item.item6 {
+  animation: fade-in 1s 1s ease-in-out forwards;
+  -webkit-animation: fade-in 1s 1s ease-in-out forwards;
+  -moz-animation: fade-in 1s 1s ease-in-out forwards;
+}
+
+.group_item.item7 {
+  animation: fade-in 1s 1.2s ease-in-out forwards;
+  -webkit-animation: fade-in 1s 1.2s ease-in-out forwards;
+  -moz-animation: fade-in 1s 1.2s ease-in-out forwards;
+}
+
+.group_item.item8 {
+  animation: fade-in 1s 1.4s ease-in-out forwards;
+  -webkit-animation: fade-in 1s 1.4s ease-in-out forwards;
+  -moz-animation: fade-in 1s 1.4s ease-in-out forwards;
+}
+
+.group_item.item9 {
+  animation: fade-in 1s 1.6s ease-in-out forwards;
+  -webkit-animation: fade-in 1s 1.6s ease-in-out forwards;
+  -moz-animation: fade-in 1s 1.6s ease-in-out forwards;
 }
 
 /* CSS pour les grand ecran  */
