@@ -372,7 +372,7 @@ $gray: #666666;
                     display: inline-block;
                     height: 2rem;
                     width: 2rem;
-                    background-color: #9356DC;
+                    background-color: $primary;
                     text-align: center;
                     line-height: 2rem;
                     color: white;
@@ -384,7 +384,7 @@ $gray: #666666;
                 }
                 &.active {
                     .fas {
-                        color: #9356DC;
+                        color: $primary;
                     }
                     background-color: #9256dc1c;
                 }
