@@ -11,7 +11,7 @@
   align-items: center;
   background-color: #ffffff;
   z-index: 9999;
-  animation: desapear 1s linear forwards;
+  animation: disappear 1s linear forwards;
   animation-delay: 3s;
 }
 
