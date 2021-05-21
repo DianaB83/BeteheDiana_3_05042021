@@ -54,7 +54,7 @@
   align-items: center;
   background-color: #ffffff;
   z-index: 9999;
-  animation: desapear 1s linear forwards;
+  animation: disappear 1s linear forwards;
   animation-delay: 3s;
 }
 
@@ -244,7 +244,7 @@
   align-items: center;
   background-color: #ffffff;
   z-index: 9999;
-  animation: desapear 1s linear forwards;
+  animation: disappear 1s linear forwards;
   animation-delay: 3s;
 }
 
@@ -373,18 +373,18 @@
 }
 .menu_main .image {
   height: 300px;
-  background-image: url("../../images/restaurants/la_palette_du_gout.jpg");
+  background-image: url("../images/restaurants/la_palette_du_gout.jpg");
   background-size: cover;
   background-position: center;
 }
 .menu_main .image.La_note_enchantee {
-  background-image: url("../../images/restaurants/La_note_enchantee.jpg");
+  background-image: url("../images/restaurants/La_note_enchantee.jpg");
 }
 .menu_main .image.A_la_francaise {
-  background-image: url("../../images/restaurants/A_la_francaise.jpg");
+  background-image: url("../images/restaurants/A_la_francaise.jpg");
 }
 .menu_main .image.Le_delice_des_sens {
-  background-image: url("../../images/restaurants/le_delice_des_sens.jpg");
+  background-image: url("../images/restaurants/le_delice_des_sens.jpg");
 }
 .menu_main .menu {
   padding: 0 16px;
