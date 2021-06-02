@@ -31,8 +31,8 @@
 }
 .header .intro .intro_text {
   text-align: center;
-  padding: 1em;
-  margin-bottom: 4rem;
+  padding: 10% 0;
+  margin-bottom: 1rem;
   color: gray;
 }
 .header .help .help_title {

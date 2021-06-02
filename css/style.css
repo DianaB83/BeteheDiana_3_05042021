@@ -282,22 +282,25 @@ a {
   }
 }
 .intro_action {
-  border: none;
-  padding: 18px 30px;
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  border-radius: 40px;
-  font-size: 1.2em;
-  color: white;
-  box-shadow: 0 0 3px rgba(160, 160, 160, 0.849);
+  display: inline-block;
+  background: linear-gradient(#ff79da, #9356dc);
+  text-decoration: none;
   cursor: pointer;
-  text-shadow: 0 0 3px white;
+  border: 0;
+  text-align: center;
+  border-radius: 25px;
+  font-size: 15px;
+  color: #fff;
+  box-shadow: 0 5px 15px 0 #c3c3c3;
+  font-weight: bold;
+  margin: 0 0.3em 0.3em 0;
+  padding: 16px 30px;
+  transition: 0.2s;
 }
-.intro_action:active, .intro_action:focus {
-  outline: 0;
-}
+
 .intro_action:hover {
-  background: linear-gradient(to bottom right, #9356DC, #FF79DA);
-  transform: scale(1.01);
+  background: linear-gradient(#f77dd4, #ab65fa);
+  box-shadow: 0 5px 15px 0 #c3c3c3;
 }
 
 .header {
@@ -333,8 +336,8 @@ a {
 }
 .header .intro .intro_text {
   text-align: center;
-  padding: 1em;
-  margin-bottom: 2rem;
+  padding: 10% 0;
+  margin-bottom: 1rem;
   color: gray;
 }
 .header .help .help_title {
@@ -532,6 +535,7 @@ a {
   background-color: #fff;
   border-radius: 16px;
   box-shadow: 0 0 15px #c4c4c4;
+  opacity: 0;
   overflow: hidden;
   position: relative;
   top: 20px;
@@ -680,42 +684,6 @@ a {
   display: block;
 }
 
-.container {
-  opacity: 0.5;
-  display: flex;
-  width: 50px;
-  justify-content: center;
-  align-items: center;
-  color: BLACK;
-}
-.container .icon {
-  width: 20px;
-}
-
-path {
-  fill: transparent;
-  stroke-width: 20;
-  stroke: black;
-}
-
-.container:hover svg * {
-  animation: heart 0.5s;
-  transform-origin: bottom;
-  animation-fill-mode: forwards;
-  fill: url(#grad2);
-}
-
-@keyframes heart {
-  0% {
-    transform: scale(0);
-    fill: url(#grad2);
-    stroke: transparent;
-  }
-  100% {
-    transform: scale(1);
-    stroke: transparent;
-  }
-}
 .main {
   background-color: #f0f0f0;
   padding: 4rem 1.1rem;

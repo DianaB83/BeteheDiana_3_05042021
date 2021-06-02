@@ -26,12 +26,15 @@
             font-size: 1.3em;
             font-weight: 800;
             text-align: center;
+            
+            
         }
         .intro_text {
             text-align: center;
-            padding: 1em;
-            margin-bottom: 4rem;
-            color: gray;
+    padding: 10% 0;
+    margin-bottom: 1rem;
+    color: gray;
+
         }
     }
     .help {
@@ -61,7 +64,7 @@
                 font-weight: 600;
                 display: flex;
                 align-items: center;
-                transition: all .4s ease-in-out;
+                transition: all .4s ease-in-out;//**//
                 .number {
                     display: inline-block;
                     height: 2rem;
@@ -74,7 +77,7 @@
                     border-radius: 50%;
                     margin-left: -1rem;
                     margin-right: 2rem;
-                    transition: all .4s ease-in-out;
+                    transition: all .4s ease-in-out;//**effet grossissant du chiffre//
                 }
                 &.active {
                     .fas {
@@ -89,10 +92,10 @@
                 }
                 &:hover .number {
                     box-shadow: 0 0 10px gray;
-                    transform: scale(1.1);
+                    transform: scale(1.1);//**transformation au moment de passer ma souris sur le chiffre//
                 }
                 &:hover {
-                    transform: translateY(-5px) scale(1.03);
+                    transform: translateY(-5px) scale(1.03);//**légère transformation quand on passe la souris//
                     box-shadow: 0 .1rem .2rem .2rem rgba(167, 167, 167, 0.699);
                 }
             }

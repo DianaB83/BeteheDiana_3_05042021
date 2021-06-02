@@ -1,36 +1,47 @@
-.container {
-    opacity: 0.5;
-    display: flex;
-    width: 50px;
-    justify-content: center;
-    align-items: center;
-    color: BLACK;
-    .icon {
-        width: 20px
+$primary: #9356DC;
+$secondary: #FF79DA;
+$tertiare: #99E2D0;
+$gray: #666666;
+$heading-shadow-size: .55rem;
+$layout-margin: 6rem;
+$grid-gutter: $layout-margin * .25;
+.like{
+    position: relative;
+    padding-right: 30px;
+    span{
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);//il s'avance puis recule//
+        font-size: 1.6em;
+        cursor: pointer;
+        transition: all 1s ease; // lorsqu'on passe la souris sur le coeur//
     }
-}
-
-path {
-    fill: transparent;
-    stroke-width: 20;
-    stroke: black;
-}
-
-.container:hover svg * {
-    animation: heart 0.5s;
-    transform-origin: bottom;
-    animation-fill-mode: forwards;
-    fill: url(#grad2);
-}
-
-@keyframes heart {
-    0% {
-        transform: scale(0);
-        fill: url(#grad2);
-        stroke: transparent;
+    .fas{
+        display: none;
+        color: $primary; 
     }
-    100% {
-        transform: scale(1);
-        stroke: transparent;
+    .far:hover{
+        display: none;
+        cursor: pointer;
+  overflow: hidden;
+  
+    }
+    
+    .far:hover ~ .fas{
+        display: block;
+       opacity: 0;
+    }
+
+    .fas:hover{
+        display: block;
+        background: linear-gradient(#ff79da, #9356dc);//*dégradé lorsqu'on passe la souris//
+  -webkit-text-fill-color: transparent;
+  background-clip: text;//* couleur pour définir le contenu//
+  -webkit-background-clip: text;//*definit la façon dont l'arrière plan se remplit//
+  opacity: 1;
+  z-index: 999;//*ordre des différente couches//
+        
     }
 }

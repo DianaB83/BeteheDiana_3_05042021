@@ -35,6 +35,7 @@
                 position: absolute;
                 top: 50%;
                 left: 50%;
+                //**
                 transform: translate(-50%, -50%) scale(0);
                 animation: grow .3s ease;
             }
@@ -112,10 +113,10 @@
         }
     }
 }
-
+//**forwards veut dire que l'élément retient les propriétés définies à la dernière étape de l'animation//
 .group_item.item1 {
-    animation: fade-in 1s ease-in-out forwards;
-    -webkit-animation: fade-in 1s ease-in-out forwards;
+    animation: fade-in 1s ease-in-out forwards;//**commence lentement, accélère, puis ralentit à nouveau//
+    -webkit-animation: fade-in 1s ease-in-out forwards;//** effet 2D ou 3D pour chrome**//
     -moz-animation: fade-in 1s ease-in-out forwards;
 }
 
