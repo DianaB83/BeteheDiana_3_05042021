@@ -291,16 +291,16 @@ a {
   border-radius: 25px;
   font-size: 15px;
   color: #fff;
-  box-shadow: 0 5px 18px 0 #c3c3c3;
+  box-shadow: 0px 3px 4px 2px #b7b7b7;
   font-weight: bold;
   margin: 0 0.3em 1em;
-  padding: 16px 30px;
-  transition: 0.2s;
+  padding: 15px;
+  transition: 0.25s;
 }
 
 .intro_action:hover {
   background: linear-gradient(#f77dd4, #ab65fa);
-  box-shadow: 0 0 3px rgba(160, 160, 160, 0.9);
+  box-shadow: 0px 3px 4px 2px #b7b7b7;
 }
 
 .header {
@@ -330,6 +330,7 @@ a {
   padding: 10% 15%;
 }
 .header .intro .intro_title {
+  margin-top: 2rem;
   font-size: 1.3em;
   font-weight: 800;
   text-align: center;
