@@ -11,14 +11,14 @@ $gray: #666666;
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);//*largeur de l'élément; pour qu'il soit au milieu de la page//
+        transform: translate(-50%, -50%);
         font-size: 1.6em;
         cursor: pointer;
-        transition: all 1s ease; // lorsqu'on passe la souris sur le coeur//
+        transition: all 1s ease; 
     }
     .fas{
         display: none;
-        color: $primary; 
+        color: $secondary;
     }
     .far:hover{
         display: none;
@@ -31,19 +31,25 @@ $gray: #666666;
         display: block;
         opacity: 0;
     }
-
     .fas:hover{
-        display: block;
-        background: linear-gradient(#ff79da, #9356dc);
-        background-color: transparent;
-        -webkit-background-clip: text;
-        background-clip:text;
+       display: block;
         opacity: 1;
         z-index: 999;
-        
+        background: linear-gradient(0deg, $secondary 0%, $primary 100%);
+        animation: heart 0.8s ease forwards;
     }
 }
-//opacité totale jusqu'à sa disparition//
+@keyframes heart{
+    0%{
+       background: 100% 0%;
+    }
+    100%{
+       background: 100%;
+    }
+}
+
+ 
+
 @keyframes fade-in {
     to {
         opacity: 1;

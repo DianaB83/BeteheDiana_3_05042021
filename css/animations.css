@@ -14,7 +14,7 @@
 }
 .like .fas {
   display: none;
-  color: #9356DC;
+  color: #FF79DA;
 }
 .like .far:hover {
   display: none;
@@ -27,14 +27,20 @@
 }
 .like .fas:hover {
   display: block;
-  background: linear-gradient(#ff79da, #9356dc);
-  background-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
   opacity: 1;
   z-index: 999;
+  background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
+  animation: heart 0.8s ease forwards;
 }
 
+@keyframes heart {
+  0% {
+    background: 100% 0%;
+  }
+  100% {
+    background: 100%;
+  }
+}
 @keyframes fade-in {
   to {
     opacity: 1;

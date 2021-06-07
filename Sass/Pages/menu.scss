@@ -113,57 +113,39 @@
         }
     }
 }
-//**forwards veut dire que l'élément retient les propriétés définies à la dernière étape de l'animation//
 .group_item.item1 {
-    animation: fade-in 1s ease-in-out forwards;//**commence lentement, accélère, puis ralentit à nouveau//
-    -webkit-animation: fade-in 1s ease-in-out forwards;//** effet 2D ou 3D pour chrome**//
-    -moz-animation: fade-in 1s ease-in-out forwards;
+    animation: fade-in 1s ease-in-out forwards;
+    
 }
 
 .group_item.item2 {
     animation: fade-in 1s .2s ease-in-out forwards;
-    -webkit-animation: fade-in 1s .2s ease-in-out forwards;
-    -moz-animation: fade-in 1s .2s ease-in-out forwards;
 }
 
 .group_item.item3 {
     animation: fade-in 1s .4s ease-in-out forwards;
-    -webkit-animation: fade-in 1s .4s ease-in-out forwards;
-    -moz-animation: fade-in 1s .4s ease-in-out forwards;
 }
 
 .group_item.item4 {
     animation: fade-in 1s .6s ease-in-out forwards;
-    -webkit-animation: fade-in 1s .6s ease-in-out forwards;
-    -moz-animation: fade-in 1s .6s ease-in-out forwards;
 }
 
 .group_item.item5 {
     animation: fade-in 1s .8s ease-in-out forwards;
-    -webkit-animation: fade-in 1s .8s ease-in-out forwards;
-    -moz-animation: fade-in 1s .8s ease-in-out forwards;
 }
 
 .group_item.item6 {
     animation: fade-in 1s 1s ease-in-out forwards;
-    -webkit-animation: fade-in 1s 1s ease-in-out forwards;
-    -moz-animation: fade-in 1s 1s ease-in-out forwards;
 }
 
 .group_item.item7 {
     animation: fade-in 1s 1.2s ease-in-out forwards;
-    -webkit-animation: fade-in 1s 1.2s ease-in-out forwards;
-    -moz-animation: fade-in 1s 1.2s ease-in-out forwards;
 }
 
 .group_item.item8 {
     animation: fade-in 1s 1.4s ease-in-out forwards;
-    -webkit-animation: fade-in 1s 1.4s ease-in-out forwards;
-    -moz-animation: fade-in 1s 1.4s ease-in-out forwards;
 }
 
 .group_item.item9 {
     animation: fade-in 1s 1.6s ease-in-out forwards;
-    -webkit-animation: fade-in 1s 1.6s ease-in-out forwards;
-    -moz-animation: fade-in 1s 1.6s ease-in-out forwards;
 }
