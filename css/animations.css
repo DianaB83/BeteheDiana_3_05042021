@@ -29,7 +29,7 @@
   display: block;
   background: linear-gradient(#ff79da, #9356dc);
   background-color: transparent;
-  background-clip: text;
+  background-clip: content-box;
   opacity: 1;
   z-index: 999;
 }
