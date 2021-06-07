@@ -35,10 +35,8 @@ $gray: #666666;
     .fas:hover{
         display: block;
         background: linear-gradient(#ff79da, #9356dc);
-        -webkit-text-fill-color: transparent;
+        background-color: transparent;
         background-clip:text;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
         opacity: 1;
         z-index: 999;
         
