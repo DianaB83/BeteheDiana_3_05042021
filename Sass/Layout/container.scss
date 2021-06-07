@@ -70,7 +70,7 @@ $gray: #666666;
     border-radius: 50%;
     border-top-color: transparent;
     //
-    animation: rotate 3s ease-in-out infinite reverse;//**tourne rapidement et ralenti à la fin pdt 3s//
+    animation: rotate 3s ease-in-out infinite reverse;//**tourne lentement puis rapidement et ralenti à la fin pdt 3s//
 }
 
 .loader::after {
@@ -84,7 +84,7 @@ $gray: #666666;
     background-color: transparent;
     border-radius: 50%;
     border-top-color: $secondary;
-    animation: rotate 1s ease-in-out infinite; //**tourne rapidement puis ralenti à la fin//
+    animation: rotate 1s ease-in-out infinite; //**tourne lentement puis rapidement puis ralenti à la fin//
 }
 .main {
     background-color: #f0f0f0;

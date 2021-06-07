@@ -34,12 +34,12 @@ $gray: #666666;
 
     .fas:hover{
         display: block;
-        background: linear-gradient(#ff79da, #9356dc);//*dégradé lorsqu'on passe la souris//
-        -webkit-text-fill-color: transparent;
-        background-clip: text;//* rognement à l'intérieur du coeur//
-        -webkit-background-clip: text;//*pour chrome//
-        opacity: 1;//*degré de visibilité//
-        z-index: 999;//*ordre des différente couches//
+        background: linear-gradient(#ff79da, #9356dc);
+        -webkit-background-clip: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 1;
+        z-index: 999;
         
     }
 }

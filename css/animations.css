@@ -28,7 +28,7 @@
 .like .fas:hover {
   display: block;
   background: linear-gradient(#ff79da, #9356dc);
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: transparent;
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
