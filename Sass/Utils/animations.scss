@@ -13,7 +13,7 @@ $grid-gutter: $layout-margin * .25;
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);//il s'avance puis recule//
+        transform: translate(-50%, -50%);//*largeur de l'élément; pour qu'il soit au milieu de la page//
         font-size: 1.6em;
         cursor: pointer;
         transition: all 1s ease; // lorsqu'on passe la souris sur le coeur//
@@ -25,7 +25,7 @@ $grid-gutter: $layout-margin * .25;
     .far:hover{
         display: none;
         cursor: pointer;
-  overflow: hidden;
+        overflow: hidden;
   
     }
     
@@ -38,9 +38,9 @@ $grid-gutter: $layout-margin * .25;
         display: block;
         background: linear-gradient(#ff79da, #9356dc);//*dégradé lorsqu'on passe la souris//
   -webkit-text-fill-color: transparent;
-  background-clip: text;//* couleur pour définir le contenu//
-  -webkit-background-clip: text;//*definit la façon dont l'arrière plan se remplit//
-  opacity: 1;
+  background-clip: text;//* rognement à l'intérieur du coeur//
+  -webkit-background-clip: text;//*pour chrome//
+  opacity: 1;//*degré de visibilité//
   z-index: 999;//*ordre des différente couches//
         
     }

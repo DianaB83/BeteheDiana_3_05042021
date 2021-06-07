@@ -1,16 +1,16 @@
-@import "./utils/variables.scss";
-@import "./components/footer.scss";
-@import "./layout/container.scss";
-@import "./layout/header.scss";
-@import "./layout/container.scss";
+@import "./Utils/variables.scss";
+@import "./Components/footer.scss";
+@import "./Layout/container.scss";
+@import "./Layout/header.scss";
+;
 
 /*STYLE DE LA PAGE */
 
-@import "./pages/menu.scss";
+@import "./Pages/menu.scss";
 
 /* CSS pour les grand ecran  */
 
-@import "./base/media.scss";
+@import "./Base/media.scss";
 .loader_container {
     position: fixed;
     top: 0;
@@ -63,7 +63,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);//**Données transmises sur la manière dont se déroule l'animation//
+        transform: translate(-50%, -50%);//la manière dont est placé l'élément//
     }
 }
 
@@ -124,7 +124,7 @@
 //
 @keyframes grow {
     to {
-        transform: translate(-50%, -50%) scale(2);//**début de l'animation//
+        transform: translate(-50%, -50%) scale(2);//**transformation un peu éloigné de l'écran//
         border-width: 0px;
         opacity: 0;
     }
@@ -132,7 +132,7 @@
 //
 @keyframes steps-step {
     50% {
-        transform: translateY(-5px) scale(1.06);//**milieu de la l'animation//
+        transform: translateY(-5px) scale(1.06);//**l'effet verticalement au milieu de l'animation//
         background-color: #bf8dfd;
         box-shadow: 0 3px 5px 2px gray;
     }

@@ -239,7 +239,7 @@ a {
 }
 
 .header .intro {
-    padding: 3% 15%;
+    padding: 1em;
 }
 
 @media (min-width: 635px) {
@@ -330,7 +330,6 @@ $gray: #666666;
         justify-content: space-around;
         align-items: center;
         flex-direction: column;
-        padding: 10% 15%;
         .intro_title {
             margin-top: 2rem;
             font-size: 1.3em;
